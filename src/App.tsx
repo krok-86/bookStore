@@ -2,15 +2,10 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 // import './App.css'
-import styled from 'styled-components'
-// import Sheet from './componets/Sheet/Sheet'
-
-const AppWraper = styled.div`
-max-width: 1440px;
-background: white;
+import AppStyled from './AppStyled.ts';
+import NavBar from './componets/NavBar/NavBar.tsx';
 
 
-`
 
 
 const App = () => {
@@ -18,10 +13,12 @@ const App = () => {
 
   return (
     
-    <AppWraper>
-      {/* <Sheet>ghj</Sheet> */}
+    <AppStyled>
+     <NavBar>
+      
+     </NavBar>
       fdsjjsdpsfkk
-      </AppWraper>
+      </AppStyled>
   );      
 };
 
