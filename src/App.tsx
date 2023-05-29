@@ -3,13 +3,13 @@
 // import viteLogo from '/vite.svg'
 // import './App.css'
 import styled from 'styled-components'
-import Sheet from './componets/Sheet/Sheet'
+// import Sheet from './componets/Sheet/Sheet'
 
 const AppWraper = styled.div`
-width: 100%;
-min-height: 100vh;
-padding: 2rem;
-background: rgba(253, 203, 110, 1);
+max-width: 1440px;
+background: white;
+
+
 `
 
 
@@ -19,7 +19,8 @@ const App = () => {
   return (
     
     <AppWraper>
-      <Sheet>ghj</Sheet>
+      {/* <Sheet>ghj</Sheet> */}
+      fdsjjsdpsfkk
       </AppWraper>
   );      
 };
