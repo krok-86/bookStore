@@ -1,22 +1,19 @@
 import styled from 'styled-components'
 
 const AppStyled = styled.div`
-max-width: 1440px;
-background: white;
-margin-bottom: 15px; 
 
-background-color: white; 
-width: 100%;
+max-width: 100%;
+margin-bottom: 15px; 
+border: 1px;
+background-color: #2d3f56; 
 min-height: 400px;
-max-height: 510px;
+
 margin-left: auto;
 margin-right: auto;
 margin-top: 22px;
-`
-const AppStyledFlex = styled.div`
-display: flex;
 
 `
+
 
 
 export default AppStyled;

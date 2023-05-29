@@ -13,11 +13,9 @@ const App = () => {
 
   return (
     
-    <AppStyled>
-     <NavBar>
-      
-     </NavBar>
-      fdsjjsdpsfkk
+    <AppStyled >
+     <NavBar/>
+      app
       </AppStyled>
   );      
 };
