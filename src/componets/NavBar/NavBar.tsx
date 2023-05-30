@@ -5,6 +5,28 @@ const NavBar = () => {
 
     const navItemes = ["О Компании", "Новости", "Доставка", "Оплата", "Контакты", "Статьи", "Отзывы покупателей",]
 
+    const adressTitle = [
+        {
+            class: "Info-Text",
+            value: 'Адрес шоу-рума (все товары в наличии)',
+        },
+        {
+            class: "Info-Text Info-Texts--white",
+            value: 'Москва, Большая Серпуховская, д. 46, стр. 34',
+        },
+        {
+            class: "Info-Text",
+            value: 'Как проехать или дойти?',
+        },
+        {
+            class: "Info-Text",
+            value: 'Время работы',
+        },
+        {
+            class: "Info-Text Info-Texts--white",
+            value: 'Ежедневно c 10:00 до 21:00',
+        }
+    ]
 
 
     return (
@@ -19,11 +41,14 @@ const NavBar = () => {
                 <img className="Logo" src='/images/logo.png' />
 
                 <div className="AddressTitle">
-                    <div className="ShowRoom">Адрес шоу-рума (все товары в наличии):</div>
-                    <div className="ShowRoomAddress">Москва, Большая Серпуховская, д. 46, стр. 34</div>
+                    {adressTitle.map((item) => (
+                        <div className={item.class}>{item.value}</div>
+                    ))}
+                    {/* <div className="ShowRoom">Адрес шоу-рума (все товары в наличии):</div>
+                    <div className="ShowRoom">Москва, Большая Серпуховская, д. 46, стр. 34</div>
                     <button className="DrivingDirections">Как проехать или дойти?</button>
                     <div className="WorkTime">Время работы:</div>
-                    <div className="Daily">Ежедневно c 10:00 до 21:00</div>
+                    <div className="Daily">Ежедневно c 10:00 до 21:00</div> */}
                 </div>
 
                 <div className="Phones">
@@ -51,9 +76,10 @@ const NavBar = () => {
             </div>
             <div className = "Products">
 <button className = "ProductsCatalog">Каталог товаров</button>
-<div>
-<button className = "ProductSearchButton">
+<div className="searchInput">
 <input className = "ProductSearch" value={"Название или артикул товара"}></input>
+<button className = "ProductSearchButton">
+    Й
 </button>
 </div>
 <div>

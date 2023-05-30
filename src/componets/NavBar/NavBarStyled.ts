@@ -28,13 +28,18 @@ flex-direction: column;
 justify-content: space-between;
 padding: 5px;
 }
-.ShowRoom {
+
+.Info-Text {
+    color: #d3d3d3;
+    font-size: 13px; 
+}
+
+/* .ShowRoom {
     color: #d3d3d3;
     font-size: 13px;
-}
-.ShowRoomAddress {
+} */
+.Info-Texts--white {
     color: #ffffff;
-    font-size: 13px;
 }
 .DrivingDirections {
     display: flex;
@@ -139,24 +144,31 @@ padding: 5px;
 background-color: #ff0000;
 }
 .ProductSearch {
-    width: 175px;
+    width: 380px;
     font-size: 15px;
     color: gray;
     padding: 12px 35px 12px 20px;
-    border-radius: 99px;
+    border-top-left-radius: 99px;
+    border-bottom-left-radius: 99px;
     border: 0px;
     text-align: start;
     background: #ffffff;
 }
 .ProductSearchButton {
-    width: 195px;
+    width: 62px;
     font-size: 15px;
     color: gray;
-    padding: 12px 35px 12px 20px;
-    border-radius: 99px;
     border: 0px;
     text-align: start;
     background: #4e6481;
+    border-top-right-radius: 99px;
+    border-bottom-right-radius: 99px;
+}
+
+.searchInput {
+    width: 442px;
+    display: flex;
+    
 }
 `
 export default NavBarStyled;
