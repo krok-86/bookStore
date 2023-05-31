@@ -174,7 +174,22 @@ color: #ffffff;
 .ProductsFavoritesIkon:hover {
 color: #ffffff;
 }
+
+.MuiBadge-badge {
+          color: "lightgreen";
+      background-color: "red";
+}
+.NavInfo {
+    display: flex;
+column-gap: 15px;
+justify-content: flex-start;
+padding: 15px 30px 15px 0;
+background-color: #222e3d;
+color: #d3d3d3;
+}
+
 `
 export default NavBarStyled;
 // color = "primary"
 // color="action"
+// style={{backgroundColor: '#ff0000'}}

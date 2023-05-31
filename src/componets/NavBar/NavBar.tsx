@@ -3,10 +3,11 @@ import SearchIcon from '@mui/icons-material/Search';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { Badge } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
 
-    const navItemes = ["О Компании", "Новости", "Доставка", "Оплата", "Контакты", "Статьи", "Отзывы покупателей",]
+    const navItemes = ["О Компании", "Новости", "Доставка", "Оплата", "Контакты", "Статьи", "Отзывы покупателей",] // make array of objects with links (add links to router)
 
     const adressTitle = [
         {
@@ -70,11 +71,17 @@ const NavBar = () => {
             picture: '/images/OK.png',
         },
     ]
+const infoMenu = [
+"Новинки",
+"Бренды",
+"Распродажа",
+]
 
 
     return (
         <NavBarStyled>
             <nav className='NavButtons'>
+						<Link to={'/about'}>dfgdfg</Link>
                 {navItemes.map((item) => {
                     return (
                         <div className='NavButtonsTitle'>{item}</div>)
@@ -116,7 +123,14 @@ const NavBar = () => {
                 </div>
                 <div>
                     <button className="ProductsFavorites">
-                        <Badge className="ProductsFavoritesBadge" color="primary" badgeContent={4}>
+                        <Badge className="ProductsFavoritesBadge" color="primary" badgeContent={4}
+												sx={{
+													"& .MuiBadge-badge": {
+													color: "lightgreen",
+													backgroundColor: "red"
+													}
+												}}
+												>
                             <FavoriteBorderIcon className="ProductsFavoritesIkon" />
                         </Badge>
                         <div className="ProductsFavoritesCounter">Избранное</div>
@@ -124,7 +138,16 @@ const NavBar = () => {
                 </div>
                 <div>
                     <button className="ProductsFavorites">
-                        <Badge className="ProductsFavoritesBadge" color="primary" badgeContent={2}>
+                        <Badge 
+                            className="ProductsFavoritesBadge" 
+                           color = "primary"   badgeContent={2}
+															sx={{
+																"& .MuiBadge-badge": {
+																color: "lightgreen",
+																backgroundColor: "red"
+																}
+															}}
+                        >
                             <ShoppingCartIcon className="ProductsFavoritesIkon" />
                         </Badge>
                         <div className="ProductsFavoritesCounter">Корзина</div>
@@ -135,8 +158,15 @@ const NavBar = () => {
                     <button className="Registration">Регистрация</button>
                 </div>
             </div>
-
+<div className = "NavInfo">
+{infoMenu.map((item) => {
+	return (
+		<div className = "NavButtonsTitle">{item}</div>
+	)
+})}
+</div>
         </NavBarStyled>
+
     );
 };
 

@@ -3,6 +3,12 @@ import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 // import './index.css'
 import {createGlobalStyle} from 'styled-components'
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Link,
+} from "react-router-dom";
 
 const Global = createGlobalStyle`
 body{
@@ -12,12 +18,22 @@ body{
 }
 `;
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-    <>
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+      <>
     <Global/>
     <App />
     </>
-    
-  </React.StrictMode>,
+    ),
+  },
+  {
+    path: "about",
+    element: <div>About</div>,
+  },
+]);
+
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+  <RouterProvider router={router} />,
 )
