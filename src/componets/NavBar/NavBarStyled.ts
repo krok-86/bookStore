@@ -28,19 +28,18 @@ flex-direction: column;
 justify-content: space-between;
 padding: 5px;
 }
+.NavButtonsTitle:hover {
+color: #ffffff;
+}
 
 .Info-Text {
     color: #d3d3d3;
     font-size: 13px; 
 }
-
-/* .ShowRoom {
-    color: #d3d3d3;
-    font-size: 13px;
-} */
 .Info-Texts--white {
     color: #ffffff;
 }
+
 .DrivingDirections {
     display: flex;
     align-items: center;
@@ -54,16 +53,11 @@ padding: 5px;
     color: #ffffff;
     font-size: 13px;
 }
-.WorkTime  {
-    color: #ffffff;
-    font-size: 13px;
-}
-.Daily {
-    color: #ffffff;
-    font-size: 13px;
+.DrivingDirections:hover {
+background-color: #ff0000;
 }
 
-.Phones {
+.PhonesTitle {
     display:flex;
 flex-direction: column;
 justify-content: space-between;
@@ -74,18 +68,6 @@ padding: 5px;
     font-size: 13px
 }
 .PhonesCity {
-    color: #ffffff;
-    font-size: 13px;
-}
-.PhonesCountry {
-    color: #ffffff;
-    font-size: 13px;
-}
-.PhonesMessengers {
-    color: #ffffff;
-    font-size: 13px;
-}
-.PhonesNumber {
     color: #ffffff;
     font-size: 13px;
 }
@@ -150,25 +132,49 @@ background-color: #ff0000;
     padding: 12px 35px 12px 20px;
     border-top-left-radius: 99px;
     border-bottom-left-radius: 99px;
-    border: 0px;
+    border: none;
     text-align: start;
     background: #ffffff;
+}
+.MagnifyingGlass {
+color: #ffffff;
+font-size: 2rem;
 }
 .ProductSearchButton {
     width: 62px;
     font-size: 15px;
     color: gray;
     border: 0px;
-    text-align: start;
     background: #4e6481;
     border-top-right-radius: 99px;
     border-bottom-right-radius: 99px;
 }
-
-.searchInput {
+.ProductSearchButton:hover {
+background-color: #ff0000;
+}
+.SearchInput {
     width: 442px;
     display: flex;
-    
+}
+
+.ProductsFavorites {
+    background-color: #2d3f56;
+    border: 0px;
+    color: #bdcdd5;
+}
+.ProductsFavorites:hover {
+color: #ffffff;
+}
+.ProductsFavoritesBadge {
+    color: #bdcdd5;
+}
+.ProductsFavoritesIkon {
+    color: #bdcdd5;
+}
+.ProductsFavoritesIkon:hover {
+color: #ffffff;
 }
 `
 export default NavBarStyled;
+// color = "primary"
+// color="action"
