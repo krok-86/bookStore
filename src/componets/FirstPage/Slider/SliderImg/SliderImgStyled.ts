@@ -5,7 +5,7 @@ max-width: 1440px;
 width: 100%;
 background-color: #ffffff;
 
-.Carusel {
+/* .Carusel {
     position: relative;
     width: 100%;
     padding: 10px;
@@ -66,6 +66,6 @@ background-color: #ffffff;
 }
   &.Active {
     background-color: #fff;
-  }
+  } */
 `
 export default SliderImgStyled

@@ -115,7 +115,7 @@ const infoMenu = [
             <div className="Products">
                 <button className="ProductsCatalog">Каталог товаров</button>
                 <div className="SearchInput">
-                    <input className="ProductSearch" value={"Название или артикул товара"}></input>
+                    <input className="ProductSearch" placeholder={"Название или артикул товара"}></input>
                     <button className="ProductSearchButton">
                         <SearchIcon className="MagnifyingGlass" />
                     </button>
