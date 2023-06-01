@@ -6,7 +6,7 @@ max-width: 100%;
 margin-bottom: 15px; 
 border: 1px;
 background-color: #2d3f56; 
-min-height: 400px;
+/* min-height: 400px; */
 
 margin-left: auto;
 margin-right: auto;

@@ -75,8 +75,7 @@ const infoMenu = [
 "Новинки",
 "Бренды",
 "Распродажа",
-]
-
+];
 
     return (
         <NavBarStyled>
@@ -153,15 +152,15 @@ const infoMenu = [
                         <div className="ProductsFavoritesCounter">Корзина</div>
                     </button>
                 </div>
-                <div className="PersonalInformation">
+                <div>
                     <button className="Personal">Личный кабинет</button>
-                    <button className="Registration">Регистрация</button>
+                    <div className="NavButtons NavButtonsTitle">Регистрация</div>
                 </div>
             </div>
 <div className = "NavInfo">
 {infoMenu.map((item) => {
 	return (
-		<div className = "NavButtonsTitle">{item}</div>
+		<div className = "NavButtons NavButtonsTitle">{item}</div>
 	)
 })}
 </div>

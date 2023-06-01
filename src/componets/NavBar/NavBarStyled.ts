@@ -174,11 +174,24 @@ color: #ffffff;
 .ProductsFavoritesIkon:hover {
 color: #ffffff;
 }
-
 .MuiBadge-badge {
-          color: "lightgreen";
-      background-color: "red";
+color: "lightgreen";
+background-color: "red";
 }
+
+.Personal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0001c;
+    border-radius: 99px;
+    border: 0px;
+    padding: 7px 18px 7px 18px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 13px;   
+}
+
 .NavInfo {
     display: flex;
 column-gap: 15px;
@@ -187,7 +200,6 @@ padding: 15px 30px 15px 0;
 background-color: #222e3d;
 color: #d3d3d3;
 }
-
 `
 export default NavBarStyled;
 // color = "primary"
