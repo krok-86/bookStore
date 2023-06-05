@@ -5,6 +5,31 @@ max-width: 1440px;
 width: 100%;
 background-color: #ffffff;
 
+.CaruselConteiner {
+    display: flex;
+    align-items: center;
+    background-color: gray;
+    padding-top: 30px;
+    padding-bottom: 50px;
+
+}
+.CaruselImg {
+    border-radius: 25px;
+}
+.SlideNext {
+width: 30px;
+height: 30px;
+border-radius: 99px;
+background-color: #4e6481;
+text-align: center;
+margin: 0 10px;
+}
+.SlideNext:hover {
+    background-color: #ff0000;
+}
+.Arrow {
+    color: #ffffff;
+}
 /* .Carusel {
     position: relative;
     width: 100%;
