@@ -1,40 +1,54 @@
 import SliderImgStyled from './SliderImgStyled';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import { Switch } from '@mui/material';
 
-type SliderProps = {
-    slides: string[];
-}
 
-const SliderImg = ({ slides }: SliderProps) => {
+const slides: string[] = [
+    "/images/slider/buffler.jpg",
+    "/images/slider/frapp.jpg",
+    "/images/slider/social_slider.jpg",
+     ]
+const SliderImg = () => {
     // const conteinerRef = useRef<HTMLDivElement | null>(null);
     const [indexImg, setIndexImg] = useState(0);
-    
+    const makeCycle = () => {
+        if (indexImg < slides.length - 1) {
+            setIndexImg(indexImg + 1)
+        } else {
+            setIndexImg(0)
+        }  
+    }
+    useEffect (() => {
+        const slider = setInterval (makeCycle, 2000)
+        return () => {
+            clearInterval(slider);
+        }
+    }, [indexImg]) 
 // enum Switch {
 // Before,
 // Next
 // }
 
 
-    const handleClickBeforeImg = () => {
+    const handleClickBeforeImg = (isForward: boolean) => {
         console.log(indexImg)
+        if (isForward) {
          if (indexImg >= 1) {
             setIndexImg(indexImg - 1)
         } else {
             setIndexImg(slides.length -1)
         }
-        }
-
-    const handleClickNextImg = () => {
-        console.log(indexImg)
-        if (indexImg < slides.length - 1) {
-            setIndexImg(indexImg + 1)
         } else {
-            setIndexImg(0)
+            if (indexImg < slides.length - 1) {
+                setIndexImg(indexImg + 1)
+            } else {
+                setIndexImg(0)
+            } 
         }
-    }
+    } 
+    
 
 
         return (
@@ -42,19 +56,14 @@ const SliderImg = ({ slides }: SliderProps) => {
                 <div className="Carusel">
                     <div className="CaruselWrapper">
                          <div  className="CaruselConteiner"> {/* ref={conteinerRef} */}
-                            <div className="SlideNext" onClick={() => handleClickBeforeImg()}>
+                            <div className="SlideNext" onClick={() => handleClickBeforeImg(true)}>
                                 <NavigateBeforeIcon className="Arrow" />
                             </div>
 
-                            {/* {slides.map((item) => {
-                return (<div key = {item} className = {item}>
-                    <img src={item} alt="" loading = "lazy"/>
-                    </div>
-                    )
-            })} */}
+                            
                             <img className="CaruselImg" src={slides[indexImg]} />
                             {/* <div className="SlideNext" onClick={() => handleClickNextImg()}> */}
-                            <div className="SlideNext" onClick={() =>handleClickNextImg()}>
+                            <div className="SlideNext" onClick={() =>handleClickBeforeImg(false)}>
                                 <NavigateNextIcon className="Arrow" />
                             </div>
                         </div>

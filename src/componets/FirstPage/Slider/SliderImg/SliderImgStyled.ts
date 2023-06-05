@@ -23,7 +23,18 @@ border-radius: 99px;
 background-color: #4e6481;
 text-align: center;
 margin: 0 10px;
+animation: move 1s ease-in-out 0.5s 2 alternate;
+ -moz-animation: move 1s ease-in-out 0.5s 2 alternate;
+ -webkit-animation: move 1s ease-in-out 0.5s 2 alternate;
+
 }
+
+@keyframes move {
+ 0% { transform: translateX(0); }
+ 50% { transform: translateX(20px); }
+ 100% { transform: translateX(100px); }
+}
+
 .SlideNext:hover {
     background-color: #ff0000;
 }
