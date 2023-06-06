@@ -22,10 +22,10 @@ margin-left: 30px;
     border-radius: 99px;
     border: 0px;
     width: 188px;
-    height: 27px;
+    height: 37px;
     text-align: center;
     color: #627388;
-    font-size: 13px;
+    font-size: 16px;
     margin-right: 30px;
 }
 .NewReliasesButton:hover {
@@ -41,11 +41,33 @@ color: #ffffff;
 }
 .NewRealisesBlock {
     width: 156px;
-    
+    background-color: gray;
+    position: relative;
 }
+
 .NewRealisesPicture {
     width: 156px;
+    border-radius: 20px;
     
+}
+.NewRealisesLikeWrap {
+    width: 34px;
+    height: 34px;
+    /* background-color: #f3f3f3; */
+    background-color: red;
+    cursor: hand;
+    cursor: pointer;
+    border-radius: 50%;
+    background-size: 16px 17px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0px;
+    top: 128px;
+}
+.NewRealisesLike{
+
 }
 `
 export default NewReliasesStyled;
