@@ -80,7 +80,7 @@ const infoMenu = [
     return (
         <NavBarStyled>
             <nav className='NavButtons'>
-						<Link to={'/about'}>dfgdfg</Link>
+						<Link to={'/about'}>ССЫЛКА</Link>
                 {navItemes.map((item) => {
                     return (
                         <div className='NavButtonsTitle'>{item}</div>)
