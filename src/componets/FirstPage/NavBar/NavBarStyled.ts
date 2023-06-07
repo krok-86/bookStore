@@ -4,6 +4,7 @@ const NavBarStyled = styled.div`
 max-width: 1440px;
 width: 100%;
 
+
 .NavButtons {
     display: flex;
 column-gap: 15px;
@@ -106,6 +107,9 @@ padding: 5px;
 }
 
 .Products {
+    position: sticky;
+    top: 0;
+    
     display: flex;
     justify-content: space-between;
     width: 100%;

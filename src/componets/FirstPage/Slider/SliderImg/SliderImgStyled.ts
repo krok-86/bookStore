@@ -22,6 +22,11 @@ border-radius: 50%;
 background-color: #4e6481;
 text-align: center;
 margin: 0 10px;
+display:flex;
+justify-content: center;
+align-items: center;
+cursor: hand;
+cursor: pointer;
 }
 .SlideSelect:hover {
     background-color: #ff0000;

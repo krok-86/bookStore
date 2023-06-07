@@ -12,7 +12,7 @@ background-color: #f4f8fb;
 .NewReliasesH1 {
 color: #404040;
 font-size: 26px;
-margin-left: 30px;
+margin: 20px 0 20px 30px;
 }
 .NewReliasesButton {
     display: flex;
@@ -21,12 +21,15 @@ margin-left: 30px;
     background-color: #ebf0f7;
     border-radius: 99px;
     border: 0px;
-    width: 188px;
+    width: 240px;
     height: 37px;
     text-align: center;
     color: #627388;
-    font-size: 16px;
+    font-size: 20px;
     margin-right: 30px;
+    cursor: hand;
+    cursor: pointer;
+    margin: 20px 30px 20px 0;
 }
 .NewReliasesButton:hover {
 background-color: #ff0000;
@@ -40,21 +43,24 @@ color: #ffffff;
     margin-left: 30px;
 }
 .NewRealisesBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 156px;
-    background-color: gray;
-    position: relative;
+    background-color: #f4f8fb;
+    position: relative;    
 }
 
 .NewRealisesPicture {
     width: 156px;
     border-radius: 20px;
-    
+    cursor: hand;
+    cursor: pointer;
 }
 .NewRealisesLikeWrap {
     width: 34px;
     height: 34px;
-    /* background-color: #f3f3f3; */
-    background-color: red;
+    background-color: #f4f8fb;
     cursor: hand;
     cursor: pointer;
     border-radius: 50%;
@@ -67,7 +73,45 @@ color: #ffffff;
     top: 128px;
 }
 .NewRealisesLike{
-
+color: #5e728c;
+cursor: hand;
+    cursor: pointer;
 }
+.NewRealisesLike:hover {
+    color: red;
+}
+.NewRealisesText {
+    text-align: center;
+    color: #5e728c;
+    cursor: hand;
+    cursor: pointer;
+}
+.NewRealisesText:hover {
+    color: red;
+}
+.NewRealisesPrice {
+    font-size: 24px;
+    color: #404040;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.NewRealisesButton{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 99px;
+    background-color: yellow;
+    height: 30px;
+    margin: 10px 30px 40px 30px;
+    color: #ffffff;
+    background-color: #4e6481;
+    cursor: hand;
+    cursor: pointer;
+}
+.NewRealisesButton:hover {
+    background-color: red;
+}
+
 `
 export default NewReliasesStyled;

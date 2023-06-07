@@ -55,9 +55,9 @@ const NewRelises = () => {
               <FavoriteBorderIcon className="NewRealisesLike"></FavoriteBorderIcon>
             </div>
             <div className="NewRealisesText">{item.text}</div>
-            <div className="NewRealisesPrice">{item.price}</div>
+            <div className="NewRealisesPrice">{item.price}₽</div>
             <div className="NewRealisesButton">Купить</div>
-          </div>
+            </div>
         ))}
       </div>
     </NewReliasesStyled>
