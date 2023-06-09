@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const DescriptionStyled = styled.div`
-max-width: 1440px;
+max-width: 1380px;
 width: 100%;
 background-color: #ffffff;
 padding: 40px 30px 30px 30px;

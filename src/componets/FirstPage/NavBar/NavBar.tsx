@@ -4,6 +4,8 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import { Badge } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Link } from 'react-router-dom';
+import MenuIcon from '@mui/icons-material/Menu';
+import ToggleMenu from './ToggleMenu/ToggleMenu';
 
 const NavBar = () => {
 
@@ -71,16 +73,31 @@ const NavBar = () => {
             picture: '/images/OK.png',
         },
     ]
-const infoMenu = [
-"Новинки",
-"Бренды",
-"Распродажа",
-];
+    const infoMenu = [
+        "Новинки",
+        "Бренды",
+        "Распродажа",
+    ];
+
+    const items: any[] = [
+        {
+            value: "Удилища",
+            href: "/rods",
+        },
+        {
+            value: "Катушки",
+            href: "/reels",
+        },
+        {
+            value: "Лески и шнуры",
+            href: "/lines",
+        },
+    ]
 
     return (
         <NavBarStyled>
             <nav className='NavButtons'>
-						<Link to={'/about'}>ССЫЛКА</Link>
+                <Link to={'/about'}>ССЫЛКА</Link>
                 {navItemes.map((item) => {
                     return (
                         <div className='NavButtonsTitle'>{item}</div>)
@@ -113,7 +130,12 @@ const infoMenu = [
                 </div>
             </div>
             <div className="Products">
-                <button className="ProductsCatalog">Каталог товаров</button>
+                <ToggleMenu header={"меню"} items={items}>
+                <nav>
+                    <span></span>
+                    <button className="ProductsCatalog"><MenuIcon />Каталог товаров</button>
+                </nav>
+                </ToggleMenu>
                 <div className="SearchInput">
                     <input className="ProductSearch" placeholder={"Название или артикул товара"}></input>
                     <button className="ProductSearchButton">
@@ -123,13 +145,13 @@ const infoMenu = [
                 <div>
                     <button className="ProductsFavorites">
                         <Badge className="ProductsFavoritesBadge" color="primary" badgeContent={4}
-												sx={{
-													"& .MuiBadge-badge": {
-													color: "lightgreen",
-													backgroundColor: "red"
-													}
-												}}
-												>
+                            sx={{
+                                "& .MuiBadge-badge": {
+                                    color: "lightgreen",
+                                    backgroundColor: "red"
+                                }
+                            }}
+                        >
                             <FavoriteBorderIcon className="ProductsFavoritesIkon" />
                         </Badge>
                         <div className="ProductsFavoritesCounter">Избранное</div>
@@ -137,33 +159,33 @@ const infoMenu = [
                 </div>
                 <div>
                     <button className="ProductsFavorites">
-                        <Badge 
-                            className="ProductsFavoritesBadge" 
-                           color = "primary"   badgeContent={2}
-															sx={{
-																"& .MuiBadge-badge": {
-																color: "lightgreen",
-																backgroundColor: "red"
-																}
-															}}
+                        <Badge
+                            className="ProductsFavoritesBadge"
+                            color="primary" badgeContent={2}
+                            sx={{
+                                "& .MuiBadge-badge": {
+                                    color: "lightgreen",
+                                    backgroundColor: "red"
+                                }
+                            }}
                         >
                             <ShoppingCartIcon className="ProductsFavoritesIkon" />
                         </Badge>
                         <div className="ProductsFavoritesCounter">Корзина</div>
                     </button>
                 </div>
-                <div>
+                <div className="PersonalBlock">
                     <button className="Personal">Личный кабинет</button>
                     <div className="NavButtons NavButtonsTitle">Регистрация</div>
                 </div>
             </div>
-<div className = "NavInfo">
-{infoMenu.map((item) => {
-	return (
-		<div className = "NavButtons NavButtonsTitle">{item}</div>
-	)
-})}
-</div>
+            <div className="NavInfo">
+                {infoMenu.map((item) => {
+                    return (
+                        <div className="NavButtons NavButtonsTitle">{item}</div>
+                    )
+                })}
+            </div>
         </NavBarStyled>
 
     );

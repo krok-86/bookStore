@@ -9,21 +9,17 @@ import NewRelises from './componets/FirstPage/NewRelises/NewRelises.tsx';
 import Description from './componets/FirstPage/Description/Description.tsx';
 import Footer from './componets/FirstPage/Footer/Footer.tsx';
 
-
 const App = () => {
- 
 
   return (
-    
     <AppStyled >
-    <NavBar/>
-    <SliderImg />
-    <NewRelises />
-    <Description />
-    <Footer/>
+      <NavBar />
+      <SliderImg />
+      <NewRelises />
+      <Description />
+      <Footer />
     </AppStyled>
-    
-  );      
+  );
 };
 
-export default App
+export default App;

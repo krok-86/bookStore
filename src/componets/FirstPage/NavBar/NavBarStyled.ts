@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
 const NavBarStyled = styled.div`
-max-width: 1440px;
+max-width: 1440 rem;
 width: 100%;
-
 
 .NavButtons {
     display: flex;
@@ -14,7 +13,12 @@ padding: 15px 30px 15px 0;
 }
 .Info {
     display: flex;
-    width: 100%;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 100%;
     background-color: #222e3d;
 }
 .Logo {
@@ -105,22 +109,34 @@ padding: 5px;
     border-radius: 99px;
     margin: 5px;
 }
-
+.NavInfo {
+    display: flex;
+column-gap: 15px;
+justify-content: flex-start;
+padding: 15px 30px;
+background-color: #222e3d;
+color: #d3d3d3;
+}
 .Products {
     position: sticky;
     top: 0;
     
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     background-color: #2d3f56;
     padding: 15px;
 }
 .ProductsCatalog {
-    width: 175px;
-    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 175rem;
+    font-size: 20px;
     color: #ffffff;
-    padding: 12px 3px 12px 45px;
+    margin: 12px 130px 12px 45px;
+    padding: 20px 20px 20px 20px;
     border-radius: 99px;
     border: 0px;
     text-align: center;
@@ -130,7 +146,7 @@ padding: 5px;
 background-color: #ff0000;
 }
 .ProductSearch {
-    width: 380px;
+    width: 380rem;
     font-size: 15px;
     color: gray;
     padding: 12px 35px 12px 20px;
@@ -182,7 +198,9 @@ color: #ffffff;
 color: "lightgreen";
 background-color: "red";
 }
-
+.PersonalBlock{
+    padding-right: 5rem;
+}
 .Personal {
     display: flex;
     align-items: center;
@@ -196,16 +214,6 @@ background-color: "red";
     font-size: 13px;   
 }
 
-.NavInfo {
-    display: flex;
-column-gap: 15px;
-justify-content: flex-start;
-padding: 15px 30px 15px 0;
-background-color: #222e3d;
-color: #d3d3d3;
-}
+
 `
 export default NavBarStyled;
-// color = "primary"
-// color="action"
-// style={{backgroundColor: '#ff0000'}}

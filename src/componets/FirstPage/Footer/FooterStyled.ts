@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const FooterStyled = styled.div`
-max-width: 1440px;
+max-width: 1440rem;
 width: 100%;
 background-color: #2d3f56;
 
@@ -20,6 +20,8 @@ background-color: #2d3f56;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-left: 30px;
+    padding-bottom: 50px;
 }
 .Card {
     color: #d3d3d3;
