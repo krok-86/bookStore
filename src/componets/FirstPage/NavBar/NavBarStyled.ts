@@ -128,23 +128,7 @@ color: #d3d3d3;
     background-color: #2d3f56;
     padding: 15px;
 }
-.ProductsCatalog {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 175rem;
-    font-size: 20px;
-    color: #ffffff;
-    margin: 12px 130px 12px 45px;
-    padding: 20px 20px 20px 20px;
-    border-radius: 99px;
-    border: 0px;
-    text-align: center;
-    background: #4e6481;
-}
-.ProductsCatalog:hover {
-background-color: #ff0000;
-}
+
 .ProductSearch {
     width: 380rem;
     font-size: 15px;

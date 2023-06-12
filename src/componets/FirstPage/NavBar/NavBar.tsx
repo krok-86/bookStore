@@ -1,194 +1,301 @@
-import NavBarStyled from './NavBarStyled';
-import SearchIcon from '@mui/icons-material/Search';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import { Badge } from '@mui/material';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import { Link } from 'react-router-dom';
-import MenuIcon from '@mui/icons-material/Menu';
-import ToggleMenu from './ToggleMenu/ToggleMenu';
+import NavBarStyled from "./NavBarStyled";
+import SearchIcon from "@mui/icons-material/Search";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import { Badge } from "@mui/material";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { Link } from "react-router-dom";
+import ToggleMenu from "./ToggleMenu/ToggleMenu";
+import { useState } from "react";
+
+export interface IItem {
+  value: string;
+  href: string;
+}
+const goods = [
+  {
+name: 'Z NJZ702MLFS-AR',
+company: 'Daiwa',
+collection: 'Ninja',
+group: 'Удилища',
+subgroup:'Спиннинг',
+description: 'dhdghd gfjgfkf hkfhkgf hkhkgk ghkg',
+img: '',
+  },
+]
+
+
+const items: IItem[] = [
+  {
+    value: "Удилища",
+    href: "/rods",
+  },
+  {
+    value: "Спиннинговые",
+    href: "/rods/spinning",
+  },
+  {
+    value: "Кастинговые",
+    href: "/rods/casting",
+  },
+  {
+    value: "Фидерные",
+    href: "/rods/fider",
+  },
+  {
+    value: "Daiwa",
+    href: "/rods/spinning/daiwa",
+  },
+  {
+    value: "Спиннинги Daiwa Ninja",
+    href: "/rods/spinning/ninja",
+  },
+  {
+    value: "Спиннинг Daiwa Ninja Z NJZ702MLFS-AR, 213 см, 5-20 г",
+    href: "/rods/spinning/ninja/NJZ702MLFS-AR",
+  },
+  {
+    value: "Спиннинг Daiwa Ninja Z NJZ802MFS-AR, 244 см, 10-30 г",
+    href: "/rods/spinning/ninja/NJZ702MLFS-AR",
+  },
+  {
+    value: "Спиннинги Daiwa Ninja Спиннинг Daiwa Ninja Z NJZ802MHFS-AR, 244 см, 15-50 г",
+    href: "/rods/spinning/ninja/NJZ802MHFS-AR",
+  },
+  {
+    value: "Спиннинги Daiwa Morethan",
+    href: "/rods/casting/morethan",
+  },
+  {
+    value: "Спиннинг Daiwa 22 Morethan Branzino EX AGS 94MMH, 285 см, 12-45 г",
+    href: "/rods/casting/morethan/BranzinoEXAGS94MMH",
+  },
+  {
+    value: "Спиннинг Daiwa 22 Morethan Branzino EX AGS 98M/MH, 295 см, 10-50 г",
+    href: "/rods/casting/morethan/BranzinoEXAGS98M",
+  },
+  {
+    value: "Спиннинг Daiwa 22 Morethan Branzino EX AGS 99I/LH, 395 см, 20-50 г",
+    href: "/rods/casting/morethan/BranzinoEXAGS99ILH",
+  },
+  {
+    value: "Спиннинги Daiwa Prorex",
+    href: "/rods/fider",
+  },
+
+  {
+    value: "Jackall",
+    href: "/rods/casting",
+  },
+
+  {
+    value: "Palms",
+    href: "/rods/fider",
+  },
+
+
+
+  {
+    value: "Катушки",
+    href: "/reels",
+  },
+  {
+    value: "Лески и шнуры",
+    href: "/lines",
+  },
+];
+
+const navItemes = [
+  "О Компании",
+  "Новости",
+  "Доставка",
+  "Оплата",
+  "Контакты",
+  "Статьи",
+  "Отзывы покупателей",
+]; // make array of objects with links (add links to router)
+
+const adressTitle = [
+  {
+    class: "Info-Text",
+    value: "Адрес шоу-рума (все товары в наличии)",
+  },
+  {
+    class: "Info-Text Info-Texts--white",
+    value: "Москва, Большая Серпуховская, д. 46, стр. 34",
+  },
+  {
+    class: "DrivingDirections",
+    value: "Как проехать или дойти?",
+  },
+  {
+    class: "Info-Text",
+    value: "Время работы",
+  },
+  {
+    class: "Info-Text Info-Texts--white",
+    value: "Ежедневно c 10:00 до 21:00",
+  },
+];
+const phoneTitle = [
+  {
+    class: "PhonesContacts",
+    value: "Контактные телефоны",
+  },
+  {
+    class: "PhonesCity",
+    value: "Москва: +7(495)999-99-99",
+  },
+  {
+    class: "PhonesCity",
+    value: "Россия: 8(800)999-99-99(бесплатный)",
+  },
+  {
+    class: "PhonesContacts",
+    value: "Месенджеры для звонков из других стран:",
+  },
+  {
+    class: "PhonesCity",
+    value: "+7(926)999-99-99",
+  },
+];
+
+const socialNetwork = [
+  {
+    class: "YouTube",
+    url: "https://www.youtube.com/@donfishka6772/videos",
+    picture: "/images/YouTube.png",
+  },
+  {
+    class: "VK",
+    url: "https://vk.com/feed",
+    picture: "/images/VK.png",
+  },
+  {
+    class: "OK",
+    url: "https://ok.ru/",
+    picture: "/images/OK.png",
+  },
+];
+const infoMenu = ["Новинки", "Бренды", "Распродажа"];
 
 const NavBar = () => {
-
-    const navItemes = ["О Компании", "Новости", "Доставка", "Оплата", "Контакты", "Статьи", "Отзывы покупателей",] // make array of objects with links (add links to router)
-
-    const adressTitle = [
-        {
-            class: "Info-Text",
-            value: 'Адрес шоу-рума (все товары в наличии)',
-        },
-        {
-            class: "Info-Text Info-Texts--white",
-            value: 'Москва, Большая Серпуховская, д. 46, стр. 34',
-        },
-        {
-            class: "DrivingDirections",
-            value: 'Как проехать или дойти?',
-        },
-        {
-            class: "Info-Text",
-            value: 'Время работы',
-        },
-        {
-            class: "Info-Text Info-Texts--white",
-            value: 'Ежедневно c 10:00 до 21:00',
-        }
-    ];
-    const phoneTitle = [
-        {
-            class: "PhonesContacts",
-            value: "Контактные телефоны",
-        },
-        {
-            class: "PhonesCity",
-            value: "Москва: +7(495)999-99-99",
-        },
-        {
-            class: "PhonesCity",
-            value: "Россия: 8(800)999-99-99(бесплатный)",
-        },
-        {
-            class: "PhonesContacts",
-            value: "Месенджеры для звонков из других стран:",
-        },
-        {
-            class: "PhonesCity",
-            value: "+7(926)999-99-99",
-        },
-    ];
-
-    const socialNetwork = [
-        {
-            class: 'YouTube',
-            url: 'https://www.youtube.com/@donfishka6772/videos',
-            picture: '/images/YouTube.png',
-        },
-        {
-            class: 'VK',
-            url: 'https://vk.com/feed',
-            picture: '/images/VK.png',
-        },
-        {
-            class: 'OK',
-            url: 'https://ok.ru/',
-            picture: '/images/OK.png',
-        },
-    ]
-    const infoMenu = [
-        "Новинки",
-        "Бренды",
-        "Распродажа",
-    ];
-
-    const items: any[] = [
-        {
-            value: "Удилища",
-            href: "/rods",
-        },
-        {
-            value: "Катушки",
-            href: "/reels",
-        },
-        {
-            value: "Лески и шнуры",
-            href: "/lines",
-        },
-    ]
-
-    return (
-        <NavBarStyled>
-            <nav className='NavButtons'>
-                <Link to={'/about'}>ССЫЛКА</Link>
-                {navItemes.map((item) => {
-                    return (
-                        <div className='NavButtonsTitle'>{item}</div>)
-                })}
-            </nav>
-            <div className="Info">
-                <img className="Logo" src='/images/logo.png' />
-
-                <div className="AddressTitle">
-                    {adressTitle.map((item) => (
-                        <div className={item.class}>{item.value}</div>
-                    ))}
-                </div>
-
-                <div className="PhonesTitle">
-                    {phoneTitle.map((item) => (
-                        <div className={item.class}>{item.value}</div>
-                    ))}
-                </div>
-
-                <div className="SocialMedia">
-                    <div className="SocialMediaTraking">Следите за нами в социальных сетях:</div>
-                    <div className="SocialMediaAll">
-                        {socialNetwork.map((item) => (
-                            <a href={item.url}>
-                                <img className={item.class} src={item.picture} />
-                            </a>
-                        ))}
-                    </div>
-                </div>
+  const [menuActive, setMenuActive] = useState<boolean>(false);
+  const changeMenuActive = () => {
+setMenuActive(!menuActive)
+console.log('click');
+  }
+  return (
+    <NavBarStyled>
+      <nav className="NavButtons">
+        <Link to={"/about"}>ССЫЛКА</Link>
+        {navItemes.map((item, index) => {
+          return (
+            <div key={index} className="NavButtonsTitle">
+              {item}
             </div>
-            <div className="Products">
-                <ToggleMenu header={"меню"} items={items}>
-                <nav>
-                    <span></span>
-                    <button className="ProductsCatalog"><MenuIcon />Каталог товаров</button>
-                </nav>
-                </ToggleMenu>
-                <div className="SearchInput">
-                    <input className="ProductSearch" placeholder={"Название или артикул товара"}></input>
-                    <button className="ProductSearchButton">
-                        <SearchIcon className="MagnifyingGlass" />
-                    </button>
-                </div>
-                <div>
-                    <button className="ProductsFavorites">
-                        <Badge className="ProductsFavoritesBadge" color="primary" badgeContent={4}
-                            sx={{
-                                "& .MuiBadge-badge": {
-                                    color: "lightgreen",
-                                    backgroundColor: "red"
-                                }
-                            }}
-                        >
-                            <FavoriteBorderIcon className="ProductsFavoritesIkon" />
-                        </Badge>
-                        <div className="ProductsFavoritesCounter">Избранное</div>
-                    </button>
-                </div>
-                <div>
-                    <button className="ProductsFavorites">
-                        <Badge
-                            className="ProductsFavoritesBadge"
-                            color="primary" badgeContent={2}
-                            sx={{
-                                "& .MuiBadge-badge": {
-                                    color: "lightgreen",
-                                    backgroundColor: "red"
-                                }
-                            }}
-                        >
-                            <ShoppingCartIcon className="ProductsFavoritesIkon" />
-                        </Badge>
-                        <div className="ProductsFavoritesCounter">Корзина</div>
-                    </button>
-                </div>
-                <div className="PersonalBlock">
-                    <button className="Personal">Личный кабинет</button>
-                    <div className="NavButtons NavButtonsTitle">Регистрация</div>
-                </div>
-            </div>
-            <div className="NavInfo">
-                {infoMenu.map((item) => {
-                    return (
-                        <div className="NavButtons NavButtonsTitle">{item}</div>
-                    )
-                })}
-            </div>
-        </NavBarStyled>
+          );
+        })}
+      </nav>
+      <div className="Info">
+        <img className="Logo" src="/images/logo.png" />
 
-    );
+        <div className="AddressTitle">
+          {adressTitle.map((item, index) => (
+            <div key={index} className={item.class}>
+              {item.value}
+            </div>
+          ))}
+        </div>
+
+        <div className="PhonesTitle">
+          {phoneTitle.map((item, index) => (
+            <div key={index} className={item.class}>
+              {item.value}
+            </div>
+          ))}
+        </div>
+
+        <div className="SocialMedia">
+          <div className="SocialMediaTraking">
+            Следите за нами в социальных сетях:
+          </div>
+          <div className="SocialMediaAll">
+            {socialNetwork.map((item, index) => (
+              <a key={index} href={item.url}>
+                <img className={item.class} src={item.picture} />
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="Products">
+        <ToggleMenu
+          active={menuActive}
+          changeMenuActive={changeMenuActive}
+        //   header={"Каталог товаров"}
+          items={items}
+        />
+         <div className="SearchInput">
+          <input
+            className="ProductSearch"
+            placeholder={"Название или артикул товара"}
+          ></input>
+          <button className="ProductSearchButton">
+            <SearchIcon className="MagnifyingGlass" />
+          </button>
+        </div>
+        <div>
+          <button className="ProductsFavorites">
+            <Badge
+              className="ProductsFavoritesBadge"
+              color="primary"
+              badgeContent={4}
+              sx={{
+                "& .MuiBadge-badge": {
+                  color: "lightgreen",
+                  backgroundColor: "red",
+                },
+              }}
+            >
+              <FavoriteBorderIcon className="ProductsFavoritesIkon" />
+            </Badge>
+            <div className="ProductsFavoritesCounter">Избранное</div>
+          </button>
+        </div>
+        <div>
+          <button className="ProductsFavorites">
+            <Badge
+              className="ProductsFavoritesBadge"
+              color="primary"
+              badgeContent={2}
+              sx={{
+                "& .MuiBadge-badge": {
+                  color: "lightgreen",
+                  backgroundColor: "red",
+                },
+              }}
+            >
+              <ShoppingCartIcon className="ProductsFavoritesIkon" />
+            </Badge>
+            <div className="ProductsFavoritesCounter">Корзина</div>
+          </button>
+        </div>
+        <div className="PersonalBlock">
+          <button className="Personal">Личный кабинет</button>
+          <div className="NavButtons NavButtonsTitle">Регистрация</div>
+        </div>
+      </div>
+      <div className="NavInfo">
+        {infoMenu.map((item, index) => {
+          return (
+            <div key={index} className="NavButtons NavButtonsTitle">
+              {item}
+            </div>
+          );
+        })}
+      </div>
+    </NavBarStyled>
+  );
 };
 
 export default NavBar;
