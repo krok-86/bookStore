@@ -13,13 +13,113 @@ export interface IItem {
 }
 const goods = [
   {
-name: 'Z NJZ702MLFS-AR',
-company: 'Daiwa',
-collection: 'Ninja',
-group: 'Удилища',
-subgroup:'Спиннинг',
-description: 'dhdghd gfjgfkf hkfhkgf hkhkgk ghkg',
-img: '',
+    name: 'Z NJZ702MLFS-AR',
+    company: 'Daiwa',
+    collection: 'Ninja',
+    group: 'Удилища',
+    subgroup:'Спиннинг',
+    description: 'Описание',
+    img: '',
+  },
+  {
+    name: 'Z NJZ802MFS-AR',
+    company: 'Daiwa',
+    collection: 'Ninja',
+    group: 'Удилища',
+    subgroup:'Спиннинг',
+    description: 'Описание',
+    img: '',
+  },
+  {
+    name: 'Z NJZ802MHFS-AR',
+    company: 'Daiwa',
+    collection: 'Ninja',
+    group: 'Удилища',
+    subgroup:'Спиннинг',
+    description: 'Описание',
+    img: '',
+  },
+
+  {
+    name: 'Branzino EX AGS 94MMH',
+    company: 'Daiwa',
+    collection: 'Morethan',
+    group: 'Удилища',
+    subgroup:'Спиннинг',
+    description: 'Описание',
+    img: '',
+  },
+  {
+    name: 'Branzino EX AGS 98M/MH',
+    company: 'Daiwa',
+    collection: 'Morethan',
+    group: 'Удилища',
+    subgroup:'Спиннинг',
+    description: 'Описание',
+    img: '',
+  },
+  {
+    name: 'Branzino EX AGS 99I/LH',
+    company: 'Daiwa',
+    collection: 'Morethan',
+    group: 'Удилища',
+    subgroup:'Спиннинг',
+    description: 'Описание',
+    img: '',
+  },
+  {
+    name: 'FC LT 1000S',
+    company: 'Daiwa',
+    collection: 'Freams',
+    group: 'Катушки',
+    subgroup:'Безинерционные',
+    description: 'Описание',
+    img: '',
+  },
+  {
+    name: 'LT 2500',
+    company: 'Daiwa',
+    collection: 'Freams',
+    group: 'Катушки',
+    subgroup:'Безинерционные',
+    description: 'Описание',
+    img: '',
+  },
+  {
+    name: 'LT 3000',
+    company: 'Daiwa',
+    collection: 'Freams',
+    group: 'Катушки',
+    subgroup:'Безинерционные',
+    description: 'Описание',
+    img: '',
+  },
+  {
+    name: 'E LT 2000S',
+    company: 'Daiwa',
+    collection: 'Lexa',
+    group: 'Катушки',
+    subgroup:'Безинерционные',
+    description: 'Описание',
+    img: '',
+  },
+  {
+    name: 'E LT 2500',
+    company: 'Daiwa',
+    collection: 'Lexa',
+    group: 'Катушки',
+    subgroup:'Безинерционные',
+    description: 'Описание',
+    img: '',
+  },
+  {
+    name: 'E LT 3000',
+    company: 'Daiwa',
+    collection: 'Lexa',
+    group: 'Катушки',
+    subgroup:'Безинерционные',
+    description: 'Описание',
+    img: '',
   },
 ]
 
@@ -91,9 +191,6 @@ const items: IItem[] = [
     value: "Palms",
     href: "/rods/fider",
   },
-
-
-
   {
     value: "Катушки",
     href: "/reels",
@@ -182,12 +279,10 @@ const NavBar = () => {
   const [menuActive, setMenuActive] = useState<boolean>(false);
   const changeMenuActive = () => {
 setMenuActive(!menuActive)
-console.log('click');
   }
   return (
     <NavBarStyled>
       <nav className="NavButtons">
-        <Link to={"/about"}>ССЫЛКА</Link>
         {navItemes.map((item, index) => {
           return (
             <div key={index} className="NavButtonsTitle">
@@ -281,7 +376,7 @@ console.log('click');
           </button>
         </div>
         <div className="PersonalBlock">
-          <button className="Personal">Личный кабинет</button>
+          <button className="Personal"><Link className="Personal" to={"/personalArea"}>Личный кабинет</Link></button>
           <div className="NavButtons NavButtonsTitle">Регистрация</div>
         </div>
       </div>

@@ -9,6 +9,7 @@ import {
   Route,
   Link,
 } from "react-router-dom";
+import PersonalArea from './componets/SecondPage/PersonalArea/PersonalArea.tsx';
 
 const Global = createGlobalStyle`
 body{
@@ -24,13 +25,14 @@ const router = createBrowserRouter([
     element: (
       <>
     <Global/>
-    <App />
+    <App />    
     </>
     ),
   },
   {
-    path: "about",
-    element: <div>About</div>,
+    path: "personalArea",
+    element:<PersonalArea />,
+    // <div>About</div>,
   },
 ]);
 

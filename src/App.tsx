@@ -9,6 +9,7 @@ import NewRelises from './componets/FirstPage/NewRelises/NewRelises.tsx';
 import Description from './componets/FirstPage/Description/Description.tsx';
 import Footer from './componets/FirstPage/Footer/Footer.tsx';
 
+
 const App = () => {
 
   return (

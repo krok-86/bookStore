@@ -178,10 +178,10 @@ color: #ffffff;
 .ProductsFavoritesIkon:hover {
 color: #ffffff;
 }
-.MuiBadge-badge {
+/* .MuiBadge-badge {
 color: "lightgreen";
 background-color: "red";
-}
+} */
 .PersonalBlock{
     padding-right: 5rem;
 }
@@ -195,8 +195,10 @@ background-color: "red";
     padding: 7px 18px 7px 18px;
     text-align: center;
     color: #ffffff;
-    font-size: 13px;   
+    font-size: 13px;  
+    text-decoration: none; 
 }
+
 
 
 `

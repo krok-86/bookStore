@@ -2,8 +2,6 @@ import SliderImgStyled from './SliderImgStyled';
 import { useEffect, useState } from 'react';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
-// import { Switch } from '@mui/material';
-
 
 const slides: string[] = [
     "/images/slider/buffler.jpg",
