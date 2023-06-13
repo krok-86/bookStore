@@ -61,17 +61,34 @@ margin-left: 15px;
 }
 
 .RegistrationMail {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 15px;
 width: 256px;
-height: 66px;
+/* height: 66px; */
 background-color: #e8f0fe;
 margin: 20px;
 }
 .RegistrationPass {
+    display: flex;
+    align-items: flex-end;
+    padding: 15px;
     width: 256px;
-height: 66px;
+/* height: 66px; */
 background-color: #e8f0fe;
 margin: 20px;
 }
-
+.RegistrationPassBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.RegistrationIcon {
+    /* margin: 7px; */
+    /* padding-left: 11px; */
+    /* display: flex;
+    align-self: flex-end; */
+}
 `
 export default PersonalAreaStyled;

@@ -11,117 +11,8 @@ export interface IItem {
   value: string;
   href: string;
 }
-const goods = [
-  {
-    name: 'Z NJZ702MLFS-AR',
-    company: 'Daiwa',
-    collection: 'Ninja',
-    group: 'Удилища',
-    subgroup:'Спиннинг',
-    description: 'Описание',
-    img: '',
-  },
-  {
-    name: 'Z NJZ802MFS-AR',
-    company: 'Daiwa',
-    collection: 'Ninja',
-    group: 'Удилища',
-    subgroup:'Спиннинг',
-    description: 'Описание',
-    img: '',
-  },
-  {
-    name: 'Z NJZ802MHFS-AR',
-    company: 'Daiwa',
-    collection: 'Ninja',
-    group: 'Удилища',
-    subgroup:'Спиннинг',
-    description: 'Описание',
-    img: '',
-  },
 
-  {
-    name: 'Branzino EX AGS 94MMH',
-    company: 'Daiwa',
-    collection: 'Morethan',
-    group: 'Удилища',
-    subgroup:'Спиннинг',
-    description: 'Описание',
-    img: '',
-  },
-  {
-    name: 'Branzino EX AGS 98M/MH',
-    company: 'Daiwa',
-    collection: 'Morethan',
-    group: 'Удилища',
-    subgroup:'Спиннинг',
-    description: 'Описание',
-    img: '',
-  },
-  {
-    name: 'Branzino EX AGS 99I/LH',
-    company: 'Daiwa',
-    collection: 'Morethan',
-    group: 'Удилища',
-    subgroup:'Спиннинг',
-    description: 'Описание',
-    img: '',
-  },
-  {
-    name: 'FC LT 1000S',
-    company: 'Daiwa',
-    collection: 'Freams',
-    group: 'Катушки',
-    subgroup:'Безинерционные',
-    description: 'Описание',
-    img: '',
-  },
-  {
-    name: 'LT 2500',
-    company: 'Daiwa',
-    collection: 'Freams',
-    group: 'Катушки',
-    subgroup:'Безинерционные',
-    description: 'Описание',
-    img: '',
-  },
-  {
-    name: 'LT 3000',
-    company: 'Daiwa',
-    collection: 'Freams',
-    group: 'Катушки',
-    subgroup:'Безинерционные',
-    description: 'Описание',
-    img: '',
-  },
-  {
-    name: 'E LT 2000S',
-    company: 'Daiwa',
-    collection: 'Lexa',
-    group: 'Катушки',
-    subgroup:'Безинерционные',
-    description: 'Описание',
-    img: '',
-  },
-  {
-    name: 'E LT 2500',
-    company: 'Daiwa',
-    collection: 'Lexa',
-    group: 'Катушки',
-    subgroup:'Безинерционные',
-    description: 'Описание',
-    img: '',
-  },
-  {
-    name: 'E LT 3000',
-    company: 'Daiwa',
-    collection: 'Lexa',
-    group: 'Катушки',
-    subgroup:'Безинерционные',
-    description: 'Описание',
-    img: '',
-  },
-]
+
 
 
 const items: IItem[] = [
@@ -280,6 +171,7 @@ const NavBar = () => {
   const changeMenuActive = () => {
 setMenuActive(!menuActive)
   }
+  
   return (
     <NavBarStyled>
       <nav className="NavButtons">

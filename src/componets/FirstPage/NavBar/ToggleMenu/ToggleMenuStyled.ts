@@ -21,7 +21,7 @@ background-color: #ffffff;
 border-radius: 20px;
 color:#97a4b4;
 display: flex;
-align-items: center;
+align-items: start;
 justify-content: space-between;
 }
 ul li  {
@@ -29,6 +29,7 @@ ul li  {
     text-decoration: none;
     list-style-type: none;
     text-align: left;
+    
 }
 ul li a:hover {
     background-color: #ff0000;
@@ -46,6 +47,7 @@ ul {
 }
 .MenuBranchLeft {
    background-color: #f8f8f8;
+   cursor: pointer;
 }
 .MenuBranchRight {
     width: 50%; 

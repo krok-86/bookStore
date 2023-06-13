@@ -3,6 +3,7 @@ import ToggleMenuStyled from "./ToggleMenuStyled";
 import MenuIcon from "@mui/icons-material/Menu";
 import { IItem } from "../NavBar";
 import CloseIcon from '@mui/icons-material/Close';
+import { goods } from "../../../../constants";
 
 interface IToggleMenu {
     items: IItem[];
@@ -11,7 +12,20 @@ interface IToggleMenu {
     changeMenuActive: () => void;
 }
 const ToggleMenu: FC<IToggleMenu> = ({ items, active, changeMenuActive }) => {
-
+    const goodsReduce = goods.reduce(function(acc: string[],curent){
+        if(!acc.includes(curent.group)){
+        acc.push(curent.group)
+        }
+        return acc
+        },[])
+        console.log(goodsReduce);
+        const goodsReduceLevel = goods.reduce(function(acc: string[],curent){
+            if(!acc.includes(curent.subgroup)){
+            acc.push(curent.subgroup)
+            }
+            return acc
+            },[])
+            console.log(goodsReduceLevel);
     return (
         <ToggleMenuStyled isActive={active}>
             <button className="ProductsCatalog" onClick={changeMenuActive}>
@@ -24,12 +38,19 @@ const ToggleMenu: FC<IToggleMenu> = ({ items, active, changeMenuActive }) => {
                     <div className="MenuContent">
                         <div className="MenuBranchLeft">
                             <ul>
+                                {goodsReduce.map((item) => (
+                                    <li>
+                                        <a>{item}</a>
+                                    </li>
+                                ))}
+                            </ul>
+                            {/* <ul>
                                 {items.map((item, index) => (
                                     <li key={index}>
                                         <a href={item.href}>{item.value}</a>
                                     </li>
                                 ))}
-                            </ul>
+                            </ul> */}
                         </div>
                         <div className="MenuBranchRight">
                             <ul>
