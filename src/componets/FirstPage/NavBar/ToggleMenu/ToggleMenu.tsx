@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import ToggleMenuStyled from "./ToggleMenuStyled";
 import MenuIcon from "@mui/icons-material/Menu";
 import { IItem } from "../NavBar";
@@ -12,20 +12,31 @@ interface IToggleMenu {
     changeMenuActive: () => void;
 }
 const ToggleMenu: FC<IToggleMenu> = ({ items, active, changeMenuActive }) => {
+    const [selectedGroup, setSelectedGroup] = useState<string>('');
+// console.log(group)
+const selectedSubGruop = goods.reduce(function(acc: string[],curent){
+    if(!acc.includes(curent.subgroup)){
+        if (curent.group===selectedGroup){
+            acc.push(curent.subgroup)
+        }
+        }
+        return acc
+},[])
+
     const goodsReduce = goods.reduce(function(acc: string[],curent){
         if(!acc.includes(curent.group)){
         acc.push(curent.group)
         }
         return acc
         },[])
-        console.log(goodsReduce);
+       
         const goodsReduceLevel = goods.reduce(function(acc: string[],curent){
             if(!acc.includes(curent.subgroup)){
             acc.push(curent.subgroup)
             }
             return acc
             },[])
-            console.log(goodsReduceLevel);
+            
     return (
         <ToggleMenuStyled isActive={active}>
             <button className="ProductsCatalog" onClick={changeMenuActive}>
@@ -39,7 +50,7 @@ const ToggleMenu: FC<IToggleMenu> = ({ items, active, changeMenuActive }) => {
                         <div className="MenuBranchLeft">
                             <ul>
                                 {goodsReduce.map((item) => (
-                                    <li>
+                                    <li onMouseEnter={() => setSelectedGroup(item)}>
                                         <a>{item}</a>
                                     </li>
                                 ))}
@@ -54,7 +65,7 @@ const ToggleMenu: FC<IToggleMenu> = ({ items, active, changeMenuActive }) => {
                         </div>
                         <div className="MenuBranchRight">
                             <ul>
-                                {goodsReduceLevel.map((item, index) => (
+                                {selectedSubGruop.map((item, index) => (
                                     <li key={index}>
                                         <a>{item}</a>
                                     </li>
