@@ -1,7 +1,6 @@
 // import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
-// import './index.css'
 import {createGlobalStyle} from 'styled-components'
 import {
   createBrowserRouter,
@@ -10,6 +9,7 @@ import {
   Link,
 } from "react-router-dom";
 import PersonalArea from './componets/SecondPage/PersonalArea/PersonalArea.tsx';
+import Registration from './componets/SecondPage/Registration/Registration.tsx';
 
 const Global = createGlobalStyle`
 body{
@@ -32,7 +32,14 @@ const router = createBrowserRouter([
   {
     path: "personalArea",
     element:<PersonalArea />,
-    // <div>About</div>,
+  },
+  {
+    path: "registrtion",
+    element:<Registration />,
+  },
+  {
+    path: "http://127.0.0.1:5173/",
+    element:<App />,
   },
 ]);
 

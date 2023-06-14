@@ -1,9 +1,17 @@
+import { useState } from "react";
 import NavBar from "../../FirstPage/NavBar/NavBar";
 import PersonalAreaStyled from "./PersonalAreaStyled";
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
+import Footer from "../../FirstPage/Footer/Footer";
 
 const PersonalArea = () => {
+//     const [reg, setReg] = useState<any>([
+//         {title: maile},
+//         {title: phone}
+//     ]);
+// const changeReg = () => {
 
+// }
     return (
         <>
         <NavBar />
@@ -16,13 +24,13 @@ const PersonalArea = () => {
         </div>
         <div className="Registration">
         <div className="RegistrationMail">
-            E-mail*
-        <input></input> 
+            {/* {reg} */}
+        <input className="RegistrationInput" placeholder="Не заполнено"></input> 
         </div>
         <div className="RegistrationPass">
         <div className="RegistrationPassBlock">
             Пароль*
-            <input></input> 
+            <input className="RegistrationInput" placeholder="Не заполнено"></input> 
             </div>
             <RemoveRedEyeIcon className="RegistrationIcon"/>
         
@@ -33,6 +41,7 @@ const PersonalArea = () => {
         <div className="RegistrationButton">Авторизоваться</div>
     
 </PersonalAreaStyled>
+<Footer/>
 </>
     )
 }

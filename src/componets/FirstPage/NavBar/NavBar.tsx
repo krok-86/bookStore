@@ -184,8 +184,8 @@ setMenuActive(!menuActive)
         })}
       </nav>
       <div className="Info">
-        <img className="Logo" src="/images/logo.png" />
-
+        {/* <img className="Logo" src="/images/logo.png" /> */}
+        <Link className="Per" to={"http://127.0.0.1:5173/"}><img className="Logo" src="/images/logo.png" /></Link>
         <div className="AddressTitle">
           {adressTitle.map((item, index) => (
             <div key={index} className={item.class}>
@@ -269,7 +269,7 @@ setMenuActive(!menuActive)
         </div>
         <div className="PersonalBlock">
           <button className="Personal"><Link className="Personal" to={"/personalArea"}>Личный кабинет</Link></button>
-          <div className="NavButtons NavButtonsTitle">Регистрация</div>
+          <div className="Registration"><Link className="Registration" to={"/registration"}>Регистрация</Link></div>
         </div>
       </div>
       <div className="NavInfo">

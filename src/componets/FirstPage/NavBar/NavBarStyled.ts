@@ -11,6 +11,7 @@ justify-content: flex-end;
 padding: 15px 30px 15px 0;
     color: #bdcdd5;
 }
+
 .Info {
     display: flex;
     justify-content: space-between;
@@ -119,14 +120,14 @@ color: #d3d3d3;
 }
 .Products {
     position: sticky;
-    top: 0;
-    
+    /* top: 5px;
+     */
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     background-color: #2d3f56;
-    padding: 15px;
+    /* padding: 0px; */
 }
 
 .ProductSearch {
@@ -139,6 +140,7 @@ color: #d3d3d3;
     border: none;
     text-align: start;
     background: #ffffff;
+    outline:none;
 }
 .MagnifyingGlass {
 color: #ffffff;
@@ -183,7 +185,16 @@ color: "lightgreen";
 background-color: "red";
 } */
 .PersonalBlock{
-    padding-right: 5rem;
+    /* padding-right: 5rem; */
+    padding: 1rem 1rem;
+}
+.Registration{
+    color: #bdcdd5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    cursor: pointer;
 }
 .Personal {
     display: flex;

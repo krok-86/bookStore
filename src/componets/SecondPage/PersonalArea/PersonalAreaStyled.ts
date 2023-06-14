@@ -65,30 +65,58 @@ margin-left: 15px;
     flex-direction: column;
     justify-content: flex-end;
     padding: 15px;
-width: 256px;
-/* height: 66px; */
-background-color: #e8f0fe;
-margin: 20px;
+    width: 256px;
+    background-color: #e8f0fe;
+    margin: 20px;
+    color: #5e728c;
 }
 .RegistrationPass {
     display: flex;
     align-items: flex-end;
     padding: 15px;
     width: 256px;
-/* height: 66px; */
-background-color: #e8f0fe;
-margin: 20px;
+    background-color: #e8f0fe;
+    margin: 20px;
+    color: #5e728c;
 }
 .RegistrationPassBlock {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    width: 235px;
+    padding-right: 15px;
 }
 .RegistrationIcon {
-    /* margin: 7px; */
-    /* padding-left: 11px; */
-    /* display: flex;
-    align-self: flex-end; */
+    color: #575a5f;
+    cursor: pointer;
 }
+.RegistrationFogot {
+    color: #575a5f;
+    cursor: pointer;
+}
+.RegistrationFogot:hover {
+    color: #ff0000;
+}
+.RegistrationInput {
+    border: 0px;
+    background-color: #e8f0fe;
+    outline:none;
+}
+.RegistrationButton {
+    width: 175px;
+    height: 40px;
+    background-color: #4e6481;
+    border-radius: 25px;
+    margin: 10px 20px 0px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.RegistrationButton:hover {
+    background-color: #ff0000;
+}
+
 `
 export default PersonalAreaStyled;

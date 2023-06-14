@@ -54,9 +54,9 @@ const ToggleMenu: FC<IToggleMenu> = ({ items, active, changeMenuActive }) => {
                         </div>
                         <div className="MenuBranchRight">
                             <ul>
-                                {items.map((item, index) => (
+                                {goodsReduceLevel.map((item, index) => (
                                     <li key={index}>
-                                        <a href={item.href}>{item.value}</a>
+                                        <a>{item}</a>
                                     </li>
                                 ))}
                             </ul>
