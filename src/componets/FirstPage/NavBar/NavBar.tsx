@@ -250,7 +250,7 @@ setMenuActive(!menuActive)
           </button>
         </div>
         <div>
-          <button className="ProductsFavorites">
+          <button className="ProductsFavorites"><Link className="ProductsFavorites" to={"/basket"}>
             <Badge
               className="ProductsFavoritesBadge"
               color="primary"
@@ -265,6 +265,7 @@ setMenuActive(!menuActive)
               <ShoppingCartIcon className="ProductsFavoritesIkon" />
             </Badge>
             <div className="ProductsFavoritesCounter">Корзина</div>
+            </Link>
           </button>
         </div>
         <div className="PersonalBlock">
@@ -275,7 +276,7 @@ setMenuActive(!menuActive)
       <div className="NavInfo">
         {infoMenu.map((item, index) => {
           return (
-            <div key={index} className="NavButtons NavButtonsTitle">
+            <div key={index} className="NavButtonsTitle">
               {item}
             </div>
           );

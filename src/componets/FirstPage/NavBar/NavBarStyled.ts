@@ -10,6 +10,8 @@ column-gap: 15px;
 justify-content: flex-end;
 padding: 15px 30px 15px 0;
     color: #bdcdd5;
+    cursor: pointer;
+    background-color: #2d3f56;
 }
 
 .Info {
@@ -33,6 +35,10 @@ display:flex;
 flex-direction: column;
 justify-content: space-between;
 padding: 5px;
+background-color: #222e3d;
+}
+.NavButtonsTitle {
+    color: #bdcdd5;
 }
 .NavButtonsTitle:hover {
 color: #ffffff;
@@ -167,11 +173,13 @@ background-color: #ff0000;
     background-color: #2d3f56;
     border: 0px;
     color: #bdcdd5;
+    text-decoration: none;    
 }
 .ProductsFavorites:hover {
 color: #ffffff;
 }
 .ProductsFavoritesBadge {
+    padding-left: 5px;
     color: #bdcdd5;
 }
 .ProductsFavoritesIkon {
@@ -194,6 +202,7 @@ background-color: "red";
     align-items: center;
     justify-content: center;
     padding: 1rem;
+    text-decoration: none;
     cursor: pointer;
 }
 .Personal {
