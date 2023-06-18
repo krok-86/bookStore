@@ -232,7 +232,7 @@ setMenuActive(!menuActive)
           </button>
         </div>
         <div>
-          <button className="ProductsFavorites">
+          <button className="ProductsFavorites"><Link className="ProductsFavorites" to={"/favorite"}>
             <Badge
               className="ProductsFavoritesBadge"
               color="primary"
@@ -247,6 +247,7 @@ setMenuActive(!menuActive)
               <FavoriteBorderIcon className="ProductsFavoritesIkon" />
             </Badge>
             <div className="ProductsFavoritesCounter">Избранное</div>
+            </Link>
           </button>
         </div>
         <div>

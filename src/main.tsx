@@ -11,6 +11,7 @@ import {
 import PersonalArea from './componets/SecondPage/PersonalArea/PersonalArea.tsx';
 import Registration from './componets/SecondPage/Registration/Registration.tsx';
 import Basket from './componets/SecondPage/Basket/Basket.tsx';
+import Favorite from './componets/SecondPage/Favorite/Favorite.tsx';
 
 const Global = createGlobalStyle`
 body{
@@ -42,10 +43,10 @@ const router = createBrowserRouter([
     path: "basket",
     element:<Basket />,
   },
-  // {
-  //   path: "favorite",
-  //   element:<Favorite />,
-  // },
+  {
+    path: "favorite",
+    element:<Favorite />,
+  },
   {
     path: "http://127.0.0.1:5173/",
     element:<App />,

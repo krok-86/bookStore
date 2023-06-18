@@ -1,19 +1,12 @@
-import { useState } from "react";
 import Footer from "../../FirstPage/Footer/Footer";
 import NavBar from "../../FirstPage/NavBar/NavBar";
-import BasketStyled from "./BasketStyled";
+import FavoriteStyled from "./FavoriteStyled";
 
-const Basket = () => {
-  const [count, setCount] = useState(0);
-  const decreaseCounter = () => {
-    if (count !== 0) {
-      setCount(count - 1);
-    }
-  };
+const Favorite = () => {
   return (
     <>
       <NavBar />
-      <BasketStyled>
+      <FavoriteStyled>
         <div>
           {/* <div className="Empty">Ваша корзина еще пуста</div> */}
           <div className="Include">Содержимое заказа</div>
@@ -29,18 +22,6 @@ const Basket = () => {
               </div>
               <div className="BasketItemDelete">Удалить из корзины</div>
             </div>
-            <div className="Price">
-              <div className="PriceNumber">42941 ₽</div>
-              <div className="PriceButton">
-                <div className="PriceSign" onClick={decreaseCounter}>
-                  -
-                </div>
-                <div className="PriceQuantity">{count}</div>
-                <div className="PriceSign" onClick={() => setCount(count + 1)}>
-                  +
-                </div>
-              </div>
-            </div>
             <div className="Total">
               <div className="TotalBlock">
                 <div className="TotalText">Товары</div>
@@ -50,14 +31,16 @@ const Basket = () => {
                 <div className="TotalText">Итого</div>
                 <div className="TotalText">42941 ₽</div>
               </div>
-              <div className="TotalButton">Оформить заказ(проверить регистрацию)</div>
+              <div className="TotalButton">
+                Оформить заказ(проверить регистрацию)
+              </div>
             </div>
           </div>
         </div>
-      </BasketStyled>
+      </FavoriteStyled>
       <Footer />
     </>
   );
 };
 
-export default Basket;
+export default Favorite;
