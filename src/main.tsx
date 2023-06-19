@@ -12,6 +12,9 @@ import PersonalArea from './componets/SecondPage/PersonalArea/PersonalArea.tsx';
 import Registration from './componets/SecondPage/Registration/Registration.tsx';
 import Basket from './componets/SecondPage/Basket/Basket.tsx';
 import Favorite from './componets/SecondPage/Favorite/Favorite.tsx';
+import AboutCompany from './componets/SecondPage/AboutCompany/AboutCompany.tsx';
+import Delivery from './componets/SecondPage/Delivery/Delivery.tsx';
+import Payment from './componets/SecondPage/Payment/Payment.tsx';
 
 const Global = createGlobalStyle`
 body{
@@ -38,6 +41,18 @@ const router = createBrowserRouter([
   {
     path: "registration",
     element:<Registration />,
+  },  
+    {
+    path: "aboutCompany",
+    element:<AboutCompany />,
+  },
+  {
+    path: "delivery",
+    element:<Delivery />,
+  },
+  {
+    path: "payment",
+    element:<Payment />,
   },
   {
     path: "basket",

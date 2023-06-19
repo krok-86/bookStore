@@ -8,8 +8,7 @@ const Favorite = () => {
       <NavBar />
       <FavoriteStyled>
         <div>
-          {/* <div className="Empty">Ваша корзина еще пуста</div> */}
-          <div className="Include">Содержимое заказа</div>
+          <div className="Include">Избранные товары</div>
           <div className="Accessible">Доступные для заказа товары</div>
           <div className="BasketItem">
             <img
@@ -20,7 +19,7 @@ const Favorite = () => {
               <div className="BasketItemDiscription">
                 Спиннинг Daiwa 20 Emeraldas Air AGS 83M, 251 см, 7-32 г
               </div>
-              <div className="BasketItemDelete">Удалить из корзины</div>
+              <div className="BasketItemDelete">Удалить из избранного</div>
             </div>
             <div className="Total">
               <div className="TotalBlock">
@@ -32,10 +31,10 @@ const Favorite = () => {
                 <div className="TotalText">42941 ₽</div>
               </div>
               <div className="TotalButton">
-                Оформить заказ(проверить регистрацию)
+                Купить
               </div>
             </div>
-          </div>
+          </div>          
         </div>
       </FavoriteStyled>
       <Footer />

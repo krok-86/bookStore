@@ -75,6 +75,7 @@ ul {
     border: 0px;
     text-align: center;
     background: #4e6481;
+    cursor: pointer;
 }
 .ProductsCatalog:hover {
 background-color: #ff0000;

@@ -92,16 +92,6 @@ const items: IItem[] = [
   },
 ];
 
-const navItemes = [
-  "О Компании",
-  "Новости",
-  "Доставка",
-  "Оплата",
-  "Контакты",
-  "Статьи",
-  "Отзывы покупателей",
-]; // make array of objects with links (add links to router)
-
 const adressTitle = [
   {
     class: "Info-Text",
@@ -165,6 +155,32 @@ const socialNetwork = [
   },
 ];
 const infoMenu = ["Новинки", "Бренды", "Распродажа"];
+const navItemes = [
+  {
+    value:"О Компании", 
+    link: "/aboutCompany",
+  },
+  {
+    value:"Доставка", 
+    link: "/delivery",
+  },
+  {
+    value:"Оплата", 
+    link: "/payment",
+  },
+  {
+    value:"Контакты", 
+    link: "/aboutCompany",
+  },
+  {
+    value:"Статьи", 
+    link: "/aboutCompany",
+  },
+  {
+    value:"Отзывы покупателей", 
+    link: "/aboutCompany",
+  },
+]; // make array of objects with links (add links to router)
 
 const NavBar = () => {
   const [menuActive, setMenuActive] = useState<boolean>(false);
@@ -178,7 +194,9 @@ setMenuActive(!menuActive)
         {navItemes.map((item, index) => {
           return (
             <div key={index} className="NavButtonsTitle">
-              {item}
+              <Link className="NavButtonsTitle" to={item.link}>
+              {item.value}
+              </Link>
             </div>
           );
         })}

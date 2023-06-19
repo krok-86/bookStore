@@ -9,8 +9,7 @@ width: 100%;
 column-gap: 15px;
 justify-content: flex-end;
 padding: 15px 30px 15px 0;
-    color: #bdcdd5;
-    cursor: pointer;
+    color: #bdcdd5;    
     background-color: #2d3f56;
 }
 
@@ -39,6 +38,8 @@ background-color: #222e3d;
 }
 .NavButtonsTitle {
     color: #bdcdd5;
+    text-decoration: none;
+    cursor: pointer;
 }
 .NavButtonsTitle:hover {
 color: #ffffff;
@@ -125,15 +126,12 @@ background-color: #222e3d;
 color: #d3d3d3;
 }
 .Products {
-    position: sticky;
-    /* top: 5px;
-     */
+    position: sticky;    
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background-color: #2d3f56;
-    /* padding: 0px; */
+    background-color: #2d3f56;    
 }
 
 .ProductSearch {
@@ -146,7 +144,7 @@ color: #d3d3d3;
     border: none;
     text-align: start;
     background: #ffffff;
-    outline:none;
+    outline:none;    
 }
 .MagnifyingGlass {
 color: #ffffff;
@@ -160,6 +158,7 @@ font-size: 2rem;
     background: #4e6481;
     border-top-right-radius: 99px;
     border-bottom-right-radius: 99px;
+    cursor: pointer;
 }
 .ProductSearchButton:hover {
 background-color: #ff0000;
