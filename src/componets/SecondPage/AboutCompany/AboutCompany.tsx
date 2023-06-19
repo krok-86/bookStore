@@ -9,7 +9,7 @@ const AboutCompany = () => {
         <>
         <NavBar />
         <AboutCompanyStyled>
-        <Description />
+            <Description />
         </AboutCompanyStyled>
         <Footer />
         </>

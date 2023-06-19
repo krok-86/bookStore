@@ -15,6 +15,7 @@ import Favorite from './componets/SecondPage/Favorite/Favorite.tsx';
 import AboutCompany from './componets/SecondPage/AboutCompany/AboutCompany.tsx';
 import Delivery from './componets/SecondPage/Delivery/Delivery.tsx';
 import Payment from './componets/SecondPage/Payment/Payment.tsx';
+import Contacts from './componets/SecondPage/Contacts/Contacts.tsx';
 
 const Global = createGlobalStyle`
 body{
@@ -55,8 +56,8 @@ const router = createBrowserRouter([
     element:<Payment />,
   },
   {
-    path: "basket",
-    element:<Basket />,
+    path: "contacts",
+    element:<Contacts />,
   },
   {
     path: "favorite",

@@ -170,15 +170,15 @@ const navItemes = [
   },
   {
     value:"Контакты", 
-    link: "/aboutCompany",
+    link: "/contacts",
   },
   {
     value:"Статьи", 
-    link: "/aboutCompany",
+    link: "/articles",
   },
   {
     value:"Отзывы покупателей", 
-    link: "/aboutCompany",
+    link: "/reviews",
   },
 ]; // make array of objects with links (add links to router)
 
