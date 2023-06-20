@@ -16,6 +16,8 @@ import AboutCompany from './componets/SecondPage/AboutCompany/AboutCompany.tsx';
 import Delivery from './componets/SecondPage/Delivery/Delivery.tsx';
 import Payment from './componets/SecondPage/Payment/Payment.tsx';
 import Contacts from './componets/SecondPage/Contacts/Contacts.tsx';
+import Articles from './componets/SecondPage/Articles/Articles.tsx';
+import Reviews from './componets/SecondPage/Reviews/Reviews.tsx';
 
 const Global = createGlobalStyle`
 body{
@@ -58,6 +60,14 @@ const router = createBrowserRouter([
   {
     path: "contacts",
     element:<Contacts />,
+  },
+  {
+    path: "articles",
+    element:<Articles />,
+  },
+  {
+    path: "reviews",
+    element:<Reviews />,
   },
   {
     path: "favorite",
