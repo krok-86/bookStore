@@ -6,7 +6,6 @@ width: 100%;
 background-color: #ffffff;
 padding: 40px 30px 30px 30px;
 color: #4b4946;
-/* font-size: 24px; */
 
 p {
     font-size: 24px;

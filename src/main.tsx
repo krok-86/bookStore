@@ -18,6 +18,7 @@ import Payment from './componets/SecondPage/Payment/Payment.tsx';
 import Contacts from './componets/SecondPage/Contacts/Contacts.tsx';
 import Articles from './componets/SecondPage/Articles/Articles.tsx';
 import Reviews from './componets/SecondPage/Reviews/Reviews.tsx';
+import NewGoods from './componets/SecondPage/NewGoods/NewGoods.tsx';
 
 const Global = createGlobalStyle`
 body{
@@ -45,7 +46,7 @@ const router = createBrowserRouter([
     path: "registration",
     element:<Registration />,
   },  
-    {
+  {
     path: "aboutCompany",
     element:<AboutCompany />,
   },
@@ -69,6 +70,18 @@ const router = createBrowserRouter([
     path: "reviews",
     element:<Reviews />,
   },
+  {
+    path: "newGoods",
+    element:<NewGoods />,
+  },
+  // {
+  //   path: "brands",
+  //   element:<Brands />,
+  // },
+  // {
+  //   path: "sale",
+  //   element:<Sale />,
+  // },
   {
     path: "favorite",
     element:<Favorite />,

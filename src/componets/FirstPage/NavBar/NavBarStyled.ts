@@ -6,9 +6,9 @@ width: 100%;
 
 .NavButtons {
     display: flex;
-column-gap: 15px;
-justify-content: flex-end;
-padding: 15px 30px 15px 0;
+    column-gap: 15px;
+    justify-content: flex-end;
+    padding: 15px 30px 15px 0;
     color: #bdcdd5;    
     background-color: #2d3f56;
 }
@@ -30,11 +30,11 @@ padding: 15px 30px 15px 0;
     padding: 5px;
 }
 .AddressTitle {
-display:flex;
-flex-direction: column;
-justify-content: space-between;
-padding: 5px;
-background-color: #222e3d;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: #222e3d;
 }
 .NavButtonsTitle {
     color: #bdcdd5;
@@ -42,17 +42,17 @@ background-color: #222e3d;
     cursor: pointer;
 }
 .NavButtonsTitle:hover {
-color: #ffffff;
+    color: #ffffff;
 }
-
 .Info-Text {
     color: #d3d3d3;
-    font-size: 13px; 
+    font-size: 13px;
+    text-decoration: none;
+    pointer-events: none;
 }
 .Info-Texts--white {
     color: #ffffff;
 }
-
 .DrivingDirections {
     display: flex;
     align-items: center;
@@ -65,16 +65,18 @@ color: #ffffff;
     text-align: center;
     color: #ffffff;
     font-size: 13px;
+    text-decoration: none;
+    cursor: pointer;
 }
 .DrivingDirections:hover {
-background-color: #ff0000;
+    background-color: #ff0000;
 }
-
 .PhonesTitle {
     display:flex;
-flex-direction: column;
-justify-content: space-between;
-padding: 5px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px;
+    pointer-events: none;
 }
 .PhonesContacts {
     color: #d3d3d3;
@@ -84,19 +86,15 @@ padding: 5px;
     color: #ffffff;
     font-size: 13px;
 }
-
 .SocialMedia {
     display:flex;
-flex-direction: column;
-justify-content: space-between;
-padding: 5px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px;
 }
 .SocialMediaTraking {
     color: #d3d3d3d3;
     font-size: 13px;
-}
-.SocialMediaAll {
-
 }
 
 .YouTube {
@@ -119,11 +117,11 @@ padding: 5px;
 }
 .NavInfo {
     display: flex;
-column-gap: 15px;
-justify-content: flex-start;
-padding: 15px 30px;
-background-color: #222e3d;
-color: #d3d3d3;
+    column-gap: 15px;
+    justify-content: flex-start;
+    padding: 15px 30px;
+    background-color: #222e3d;
+    color: #d3d3d3;
 }
 .Products {
     position: sticky;    
@@ -133,7 +131,6 @@ color: #d3d3d3;
     width: 100%;
     background-color: #2d3f56;    
 }
-
 .ProductSearch {
     width: 380rem;
     font-size: 15px;
@@ -147,8 +144,8 @@ color: #d3d3d3;
     outline:none;    
 }
 .MagnifyingGlass {
-color: #ffffff;
-font-size: 2rem;
+    color: #ffffff;
+    font-size: 2rem;
 }
 .ProductSearchButton {
     width: 62px;
@@ -161,13 +158,12 @@ font-size: 2rem;
     cursor: pointer;
 }
 .ProductSearchButton:hover {
-background-color: #ff0000;
+    background-color: #ff0000;
 }
 .SearchInput {
     width: 442px;
     display: flex;
 }
-
 .ProductsFavorites {
     background-color: #2d3f56;
     border: 0px;
@@ -175,7 +171,7 @@ background-color: #ff0000;
     text-decoration: none;    
 }
 .ProductsFavorites:hover {
-color: #ffffff;
+    color: #ffffff;
 }
 .ProductsFavoritesBadge {
     padding-left: 5px;
@@ -185,14 +181,9 @@ color: #ffffff;
     color: #bdcdd5;
 }
 .ProductsFavoritesIkon:hover {
-color: #ffffff;
+    color: #ffffff;
 }
-/* .MuiBadge-badge {
-color: "lightgreen";
-background-color: "red";
-} */
 .PersonalBlock{
-    /* padding-right: 5rem; */
     padding: 1rem 1rem;
 }
 .Registration{
@@ -217,8 +208,5 @@ background-color: "red";
     font-size: 13px;  
     text-decoration: none; 
 }
-
-
-
 `
 export default NavBarStyled;

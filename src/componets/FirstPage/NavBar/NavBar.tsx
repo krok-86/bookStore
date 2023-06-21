@@ -96,22 +96,27 @@ const adressTitle = [
   {
     class: "Info-Text",
     value: "Адрес шоу-рума (все товары в наличии)",
+    link: "",
   },
   {
     class: "Info-Text Info-Texts--white",
     value: "Москва, Большая Серпуховская, д. 46, стр. 34",
+    link: "",
   },
   {
     class: "DrivingDirections",
     value: "Как проехать или дойти?",
+    link: "/contacts",
   },
   {
     class: "Info-Text",
     value: "Время работы",
+    link: "",
   },
   {
     class: "Info-Text Info-Texts--white",
     value: "Ежедневно c 10:00 до 21:00",
+    link: "",
   },
 ];
 const phoneTitle = [
@@ -154,7 +159,20 @@ const socialNetwork = [
     picture: "/images/OK.png",
   },
 ];
-const infoMenu = ["Новинки", "Бренды", "Распродажа"];
+const infoMenu = [
+  {
+    value:"Новинки",
+    link: "/newGoods",
+  },
+  {
+    value:"Бренды",
+    link: "/brands",
+  },
+  {
+    value:"Распродажа",
+    link: "/sale",
+  },
+  ];
 const navItemes = [
   {
     value:"О Компании", 
@@ -206,9 +224,9 @@ setMenuActive(!menuActive)
         <Link className="Per" to={"http://127.0.0.1:5173/"}><img className="Logo" src="/images/logo.png" /></Link>
         <div className="AddressTitle">
           {adressTitle.map((item, index) => (
-            <div key={index} className={item.class}>
+            <Link key={index} className={item.class} to={item.link}>
               {item.value}
-            </div>
+            </Link>
           ))}
         </div>
 
@@ -295,9 +313,9 @@ setMenuActive(!menuActive)
       <div className="NavInfo">
         {infoMenu.map((item, index) => {
           return (
-            <div key={index} className="NavButtonsTitle">
-              {item}
-            </div>
+            <Link key={index} className="NavButtonsTitle" to={item.link}>
+              {item.value}
+            </Link>
           );
         })}
       </div>
