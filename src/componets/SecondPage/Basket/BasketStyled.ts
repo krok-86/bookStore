@@ -31,8 +31,7 @@ const BasketStyled = styled.div`
 .BasketItem {
     display: flex;
     justify-content: space-evenly;
-    padding: 1rem;
-    /* max-width: 824px; */
+    padding: 1rem;    
 }
 .BasketItemBlock {
     display: flex;

@@ -87,6 +87,10 @@ const router = createBrowserRouter([
     element:<Favorite />,
   },
   {
+    path: "basket",
+    element:<Basket />,
+  },
+  {
     path: "http://127.0.0.1:5173/",
     element:<App />,
   },
