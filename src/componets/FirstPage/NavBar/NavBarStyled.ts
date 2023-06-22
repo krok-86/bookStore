@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const NavBarStyled = styled.div`
-max-width: 1440 rem;
+
 width: 100%;
 
 .NavButtons {
@@ -10,7 +10,10 @@ width: 100%;
     justify-content: flex-end;
     padding: 15px 30px 15px 0;
     color: #bdcdd5;    
-    background-color: #2d3f56;
+    &-Wrapper {
+        width: 100%;
+        background-color: #2d3f56;
+    }
 }
 
 .Info {
@@ -22,6 +25,12 @@ width: 100%;
     padding-right: 1rem;
     max-width: 100%;
     background-color: #222e3d;
+    max-width: 1200px;
+    margin: 0 auto;
+    &-Wrapper {
+        width: 100%;
+        background-color: #222e3d;
+    }
 }
 .Logo {
     display: flex;
@@ -120,8 +129,9 @@ width: 100%;
     column-gap: 15px;
     justify-content: flex-start;
     padding: 15px 30px;
-    background-color: #222e3d;
     color: #d3d3d3;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 .Products {
     position: sticky;    
@@ -129,7 +139,12 @@ width: 100%;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background-color: #2d3f56;    
+    max-width: 1200px;
+    margin: 0 auto;
+    &-Wrapper {
+        width: 100%;
+        background-color: #2d3f56; 
+    }
 }
 .ProductSearch {
     width: 380rem;

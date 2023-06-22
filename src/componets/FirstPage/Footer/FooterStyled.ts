@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 const FooterStyled = styled.div`
+display: flex;
+align-items: center;
+flex-direction: column;
 max-width: 1440rem;
 width: 100%;
 background-color: #2d3f56;
@@ -9,12 +12,11 @@ background-color: #2d3f56;
 .Warning {
     color: #ffffff;
     padding: 30px ;
+    max-width: 1200px;    
 }
 .CommonBlock {
     max-width: 700px;
     display: flex;
-    justify-content: space-between;
-
 }
 .LeftBlock {
     display: flex;

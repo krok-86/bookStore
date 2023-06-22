@@ -2,17 +2,28 @@ import styled from 'styled-components';
 
 const NewGoodsStyled = styled.div`
 color: #504a45;
+display: flex;
+justify-content: center;
+
+.NewGoods {
+display: flex;
+flex-direction: column;
+}
 .SortMenu {
     display: flex;
-    height: 300px;
 }
 .SortBlock {
     display: flex;
+    flex-direction: column;    
+}
+.SortBlockButton {
+  display: flex;
 }
 .Sort {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    background-color: red;
     background-color: #ffffff;
     border-radius: 20px;
     border: 0px;
@@ -42,10 +53,6 @@ color: #504a45;
     background-color: #ff0000;
 }
 
-/* .gooodsList {
-
-} */
-
 .NewReliasesItem{
     display: flex;
     justify-content: space-between;
@@ -57,34 +64,32 @@ color: #504a45;
     flex-direction: column;
     justify-content: space-between;
     width: 156px;
+    margin: 1rem;
     background-color: #f4f8fb;
-    position: relative;    
+    /* position: relative;     */
 }
 
 .NewRealisesPicture {
     width: 156px;
     border-radius: 20px;
-    cursor: hand;
     cursor: pointer;
 }
 .NewRealisesLikeWrap {
     width: 34px;
     height: 34px;
-    background-color: #f4f8fb;
-    cursor: hand;
-    cursor: pointer;
+    background-color: #f4f8fb;   
     border-radius: 50%;
     background-size: 16px 17px;
     display:flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    /* position: absolute; */
     right: 0px;
     top: 128px;
+    cursor: pointer;
 }
 .NewRealisesLike{
-color: #5e728c;
-cursor: hand;
+    color: #5e728c;
     cursor: pointer;
 }
 .NewRealisesLike:hover {
@@ -93,7 +98,6 @@ cursor: hand;
 .NewRealisesText {
     text-align: center;
     color: #5e728c;
-    cursor: hand;
     cursor: pointer;
 }
 .NewRealisesText:hover {
@@ -110,13 +114,11 @@ cursor: hand;
     display:flex;
     justify-content: center;
     align-items: center;
-    border-radius: 99px;
-    background-color: yellow;
+    border-radius: 99px;    
     height: 30px;
     margin: 10px 30px 40px 30px;
     color: #ffffff;
-    background-color: #4e6481;
-    cursor: hand;
+    background-color: #4e6481;    
     cursor: pointer;
 }
 .NewRealisesButton:hover {

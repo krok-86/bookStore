@@ -5,17 +5,19 @@ import NewGoodsStyled from "./NewGoodsStyled";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
 const NewGoods = () => {
-
   return (
     <>
       <NavBar />
       <NewGoodsStyled>
+        <div className="NewGoods">
         <h1>
           <b>Новинки</b>
         </h1>
         <div className="SortMenu">
           <div className="Goods">
-            <p><b>Тип товаров</b></p>
+            <p>
+              <b>Тип товаров</b>
+            </p>
             <ul>
               <li>Спиннинги</li>
               <li>Катушки</li>
@@ -23,6 +25,7 @@ const NewGoods = () => {
             </ul>
           </div>
           <div className="SortBlock">
+            <div className="SortBlockButton">
             <div className="Sort">
               <div className="">Показывать:</div>
               <div className="Show">По названию</div>
@@ -33,31 +36,26 @@ const NewGoods = () => {
               <div className="Show">Все товары</div>
               <div className="Show">в наличии</div>
             </div>
-
-
+            </div>
             <div className="NewReliasesItem">
-        {NewRealisesItem.map((item) => (
-          <div className="NewRealisesBlock">
-            <img className="NewRealisesPicture" src={item.picture} />
-            <div className="NewRealisesLikeWrap">
-              <FavoriteBorderIcon className="NewRealisesLike"></FavoriteBorderIcon>
+              {NewRealisesItem.map((item) => (
+                <div className="NewRealisesBlock">
+                  <img className="NewRealisesPicture" src={item.picture} />
+                  <div className="NewRealisesLikeWrap">
+                    <FavoriteBorderIcon className="NewRealisesLike"></FavoriteBorderIcon>
+                  </div>
+                  <div className="NewRealisesText">{item.text}</div>
+                  <div className="NewRealisesPrice">{item.price}₽</div>
+                  <div className="NewRealisesButton">Купить</div>
+                </div>
+              ))}
             </div>
-            <div className="NewRealisesText">{item.text}</div>
-            <div className="NewRealisesPrice">{item.price}₽</div>
-            <div className="NewRealisesButton">Купить</div>
-            </div>
-        ))}
-      </div>
-
           </div>
         </div>
+        </div>
+        {/* <div className="gooodsList"> */}
 
-{/* <div className="gooodsList"> */}
-
-        
-
-      {/* </div> */}
-
+        {/* </div> */}
       </NewGoodsStyled>
       <Footer />
     </>

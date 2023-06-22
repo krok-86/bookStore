@@ -208,7 +208,8 @@ setMenuActive(!menuActive)
   
   return (
     <NavBarStyled>
-      <nav className="NavButtons">
+      
+      <nav className="NavButtons LayoutSection">
         {navItemes.map((item, index) => {
           return (
             <div key={index} className="NavButtonsTitle">
@@ -219,7 +220,9 @@ setMenuActive(!menuActive)
           );
         })}
       </nav>
-      <div className="Info">
+
+      <div className="Info-Wrapper">
+      <div className="Info LayoutSection">
         {/* <img className="Logo" src="/images/logo.png" /> */}
         <Link className="Per" to={"http://127.0.0.1:5173/"}><img className="Logo" src="/images/logo.png" /></Link>
         <div className="AddressTitle">
@@ -251,6 +254,8 @@ setMenuActive(!menuActive)
           </div>
         </div>
       </div>
+      </div>
+      <div className="Products-Wrapper">
       <div className="Products">
         <ToggleMenu
           active={menuActive}
@@ -310,6 +315,8 @@ setMenuActive(!menuActive)
           <div className="Registration"><Link className="Registration" to={"/registration"}>Регистрация</Link></div>
         </div>
       </div>
+      </div>
+      <div className='Info-Wrapper'>
       <div className="NavInfo">
         {infoMenu.map((item, index) => {
           return (
@@ -318,6 +325,7 @@ setMenuActive(!menuActive)
             </Link>
           );
         })}
+      </div>
       </div>
     </NavBarStyled>
   );
