@@ -4,19 +4,20 @@ const FooterStyled = styled.div`
 display: flex;
 align-items: center;
 flex-direction: column;
-max-width: 1440rem;
-width: 100%;
 background-color: #2d3f56;
 
-
+.FooterBlock {
+    display: flex;
+    flex-direction: column;
+}
 .Warning {
     color: #ffffff;
     padding: 30px ;
-    max-width: 1200px;    
+    max-width: 1200px;       
 }
 .CommonBlock {
-    max-width: 700px;
     display: flex;
+    justify-content: start;   
 }
 .LeftBlock {
     display: flex;
@@ -24,6 +25,7 @@ background-color: #2d3f56;
     justify-content: space-between;
     padding-left: 30px;
     padding-bottom: 50px;
+    padding: 0 30px 50px 50px;
 }
 .Card {
     color: #d3d3d3;

@@ -1,5 +1,27 @@
 import { ReleaseItem } from "./store/interface";
 
+export const sort = [
+  {
+    title: "Показывать:",
+    class: "",
+  },
+  {
+    title: "Все товары",
+    class: "Show",
+  },
+  {
+    title: "В наличии",
+    class: "Show",
+  },
+  {
+    title: "По названию",
+    class: "Show",
+  },
+  {
+    title: "По цене",
+    class: "Show",
+  },
+]
 export const goods = [
     {
       name: 'Z NJZ702MLFS-AR',
@@ -142,6 +164,6 @@ export const goods = [
         picture: "/images/newReliases/цикада.jpg",
         text: "Раттлин Lucky Craft Air Claw S, 2.8 г, #Blow Brown Glow",
         price: 1095,
-      },
+      },      
     ];
     

@@ -1,8 +1,9 @@
-import { NewRealisesItem } from "../../../constants";
 import Footer from "../../FirstPage/Footer/Footer";
 import NavBar from "../../FirstPage/NavBar/NavBar";
+import GoodBlock from "../../commoneComponents/GoodBlock/GoodBlock";
 import NewGoodsStyled from "./NewGoodsStyled";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import SortBlock from "./SortBlock/SortBlock";
+
 
 const NewGoods = () => {
   return (
@@ -26,36 +27,13 @@ const NewGoods = () => {
           </div>
           <div className="SortBlock">
             <div className="SortBlockButton">
-            <div className="Sort">
-              <div className="">Показывать:</div>
-              <div className="Show">По названию</div>
-              <div className="Show">По цене</div>
+            <SortBlock />            
             </div>
-            <div className="Sort">
-              <div className="">Показывать:</div>
-              <div className="Show">Все товары</div>
-              <div className="Show">в наличии</div>
-            </div>
-            </div>
-            <div className="NewReliasesItem">
-              {NewRealisesItem.map((item) => (
-                <div className="NewRealisesBlock">
-                  <img className="NewRealisesPicture" src={item.picture} />
-                  <div className="NewRealisesLikeWrap">
-                    <FavoriteBorderIcon className="NewRealisesLike"></FavoriteBorderIcon>
-                  </div>
-                  <div className="NewRealisesText">{item.text}</div>
-                  <div className="NewRealisesPrice">{item.price}₽</div>
-                  <div className="NewRealisesButton">Купить</div>
-                </div>
-              ))}
-            </div>
+            <GoodBlock /> <GoodBlock />
+            <GoodBlock />
           </div>
         </div>
-        </div>
-        {/* <div className="gooodsList"> */}
-
-        {/* </div> */}
+        </div>        
       </NewGoodsStyled>
       <Footer />
     </>

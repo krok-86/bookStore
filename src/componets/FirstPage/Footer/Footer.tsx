@@ -31,6 +31,7 @@ const Footer = () => {
   ];
   return (
     <FooterStyled>
+      <div className="FooterBlock">
       <p className="Warning">
         © 2005-2023. Рыболовный интернет-магазин «Японские снасти». Копирование
         материалов без разрешения правообладателя запрещено.
@@ -63,6 +64,7 @@ const Footer = () => {
             <p>Гарантия и возврат</p>
           </div>
         </div>
+      </div>
       </div>
     </FooterStyled>
   );
