@@ -5,7 +5,7 @@ const AppStyled = styled.div`
 max-width: 100%;
 margin-bottom: 15px; 
 border: 1px;
-background-color: #2d3f56; 
+background-color: #ffffff; 
 /* min-height: 400px; */
 
 margin-left: auto;

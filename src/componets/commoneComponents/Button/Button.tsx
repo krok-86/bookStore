@@ -4,7 +4,7 @@ const Button = () => {
 
     return (
         <ButtonStyled>
-            <div className="NewRealisesButton">regbnm</div>
+            <div className="NewRealisesButton">regbn</div>
         </ButtonStyled>
     )
 }

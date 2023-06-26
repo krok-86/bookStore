@@ -9,7 +9,8 @@ width: 100%;
     column-gap: 15px;
     justify-content: flex-end;
     padding: 15px 30px 15px 0;
-    color: #bdcdd5;    
+    color: #bdcdd5;   
+    background-color: #2d3f56;
     &-Wrapper {
         width: 100%;
         background-color: #2d3f56;

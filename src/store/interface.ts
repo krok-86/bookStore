@@ -4,3 +4,8 @@ export interface ReleaseItem {
     text: string;
     price: number;
   }
+  export interface IItem {
+    value: string;
+    href: string;
+  }
+  

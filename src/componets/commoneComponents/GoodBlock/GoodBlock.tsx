@@ -7,15 +7,15 @@ const GoodBlock = () => {
 
     return (
         <GoodBlockStyled>
-            <div className="NewReliasesItem">
-                {NewRealisesItem.map((item) => (
-                    <div className="NewRealisesBlock">
-                        <img className="NewRealisesPicture" src={item.picture} />
-                        <div className="NewRealisesLikeWrap">
-                            <FavoriteBorderIcon className="NewRealisesLike"></FavoriteBorderIcon>
+            <div className="GoodsItem">
+                {NewRealisesItem.map((item) => (//нужно приявязать к другому массиву
+                    <div className="GoodsArea">
+                        <img className="GoodsPicture" src={item.picture} />
+                        <div className="GoodsLikeWrap">
+                            <FavoriteBorderIcon className="GoodsLike"></FavoriteBorderIcon>
                         </div>
-                        <div className="NewRealisesText">{item.text}</div>
-                        <div className="NewRealisesPrice">{item.price}₽</div>
+                        <div className="GoodsText">{item.text}</div>
+                        <div className="GoodsPrice">{item.price}₽</div>
                         <Button></Button>
                     </div>
                 ))}

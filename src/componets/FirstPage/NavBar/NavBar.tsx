@@ -6,199 +6,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Link } from "react-router-dom";
 import ToggleMenu from "./ToggleMenu/ToggleMenu";
 import { useState } from "react";
-
-export interface IItem {
-  value: string;
-  href: string;
-}
-
-
-
-
-const items: IItem[] = [
-  {
-    value: "Удилища",
-    href: "/rods",
-  },
-  {
-    value: "Спиннинговые",
-    href: "/rods/spinning",
-  },
-  {
-    value: "Кастинговые",
-    href: "/rods/casting",
-  },
-  {
-    value: "Фидерные",
-    href: "/rods/fider",
-  },
-  {
-    value: "Daiwa",
-    href: "/rods/spinning/daiwa",
-  },
-  {
-    value: "Спиннинги Daiwa Ninja",
-    href: "/rods/spinning/ninja",
-  },
-  {
-    value: "Спиннинг Daiwa Ninja Z NJZ702MLFS-AR, 213 см, 5-20 г",
-    href: "/rods/spinning/ninja/NJZ702MLFS-AR",
-  },
-  {
-    value: "Спиннинг Daiwa Ninja Z NJZ802MFS-AR, 244 см, 10-30 г",
-    href: "/rods/spinning/ninja/NJZ702MLFS-AR",
-  },
-  {
-    value: "Спиннинги Daiwa Ninja Спиннинг Daiwa Ninja Z NJZ802MHFS-AR, 244 см, 15-50 г",
-    href: "/rods/spinning/ninja/NJZ802MHFS-AR",
-  },
-  {
-    value: "Спиннинги Daiwa Morethan",
-    href: "/rods/casting/morethan",
-  },
-  {
-    value: "Спиннинг Daiwa 22 Morethan Branzino EX AGS 94MMH, 285 см, 12-45 г",
-    href: "/rods/casting/morethan/BranzinoEXAGS94MMH",
-  },
-  {
-    value: "Спиннинг Daiwa 22 Morethan Branzino EX AGS 98M/MH, 295 см, 10-50 г",
-    href: "/rods/casting/morethan/BranzinoEXAGS98M",
-  },
-  {
-    value: "Спиннинг Daiwa 22 Morethan Branzino EX AGS 99I/LH, 395 см, 20-50 г",
-    href: "/rods/casting/morethan/BranzinoEXAGS99ILH",
-  },
-  {
-    value: "Спиннинги Daiwa Prorex",
-    href: "/rods/fider",
-  },
-
-  {
-    value: "Jackall",
-    href: "/rods/casting",
-  },
-
-  {
-    value: "Palms",
-    href: "/rods/fider",
-  },
-  {
-    value: "Катушки",
-    href: "/reels",
-  },
-  {
-    value: "Лески и шнуры",
-    href: "/lines",
-  },
-];
-
-const adressTitle = [
-  {
-    class: "Info-Text",
-    value: "Адрес шоу-рума (все товары в наличии)",
-    link: "",
-  },
-  {
-    class: "Info-Text Info-Texts--white",
-    value: "Москва, Большая Серпуховская, д. 46, стр. 34",
-    link: "",
-  },
-  {
-    class: "DrivingDirections",
-    value: "Как проехать или дойти?",
-    link: "/contacts",
-  },
-  {
-    class: "Info-Text",
-    value: "Время работы",
-    link: "",
-  },
-  {
-    class: "Info-Text Info-Texts--white",
-    value: "Ежедневно c 10:00 до 21:00",
-    link: "",
-  },
-];
-const phoneTitle = [
-  {
-    class: "PhonesContacts",
-    value: "Контактные телефоны",
-  },
-  {
-    class: "PhonesCity",
-    value: "Москва: +7(495)999-99-99",
-  },
-  {
-    class: "PhonesCity",
-    value: "Россия: 8(800)999-99-99(бесплатный)",
-  },
-  {
-    class: "PhonesContacts",
-    value: "Месенджеры для звонков из других стран:",
-  },
-  {
-    class: "PhonesCity",
-    value: "+7(926)999-99-99",
-  },
-];
-
-const socialNetwork = [
-  {
-    class: "YouTube",
-    url: "https://www.youtube.com/@donfishka6772/videos",
-    picture: "/images/YouTube.png",
-  },
-  {
-    class: "VK",
-    url: "https://vk.com/feed",
-    picture: "/images/VK.png",
-  },
-  {
-    class: "OK",
-    url: "https://ok.ru/",
-    picture: "/images/OK.png",
-  },
-];
-const infoMenu = [
-  {
-    value:"Новинки",
-    link: "/newGoods",
-  },
-  {
-    value:"Бренды",
-    link: "/brands",
-  },
-  {
-    value:"Распродажа",
-    link: "/sale",
-  },
-  ];
-const navItemes = [
-  {
-    value:"О Компании", 
-    link: "/aboutCompany",
-  },
-  {
-    value:"Доставка", 
-    link: "/delivery",
-  },
-  {
-    value:"Оплата", 
-    link: "/payment",
-  },
-  {
-    value:"Контакты", 
-    link: "/contacts",
-  },
-  {
-    value:"Статьи", 
-    link: "/articles",
-  },
-  {
-    value:"Отзывы покупателей", 
-    link: "/reviews",
-  },
-]; // make array of objects with links (add links to router)
+import { adressTitle, infoMenu, items, navItemes, phoneTitle, socialNetwork } from "../../../constants";
 
 const NavBar = () => {
   const [menuActive, setMenuActive] = useState<boolean>(false);
@@ -280,7 +88,7 @@ setMenuActive(!menuActive)
               badgeContent={4}
               sx={{
                 "& .MuiBadge-badge": {
-                  color: "lightgreen",
+                  color: "white",
                   backgroundColor: "red",
                 },
               }}
@@ -299,7 +107,7 @@ setMenuActive(!menuActive)
               badgeContent={2}
               sx={{
                 "& .MuiBadge-badge": {
-                  color: "lightgreen",
+                  color: "white",
                   backgroundColor: "red",
                 },
               }}
