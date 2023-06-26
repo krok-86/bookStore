@@ -1,4 +1,4 @@
-import { NewRealisesItem } from "../../../constants";
+import { goods } from "../../../constants";
 import Button from "../Button/Button";
 import GoodBlockStyled from "./GoodBlockStyled";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
@@ -8,13 +8,13 @@ const GoodBlock = () => {
     return (
         <GoodBlockStyled>
             <div className="GoodsItem">
-                {NewRealisesItem.map((item) => (//нужно приявязать к другому массиву
+                {goods.map((item) => (
                     <div className="GoodsArea">
-                        <img className="GoodsPicture" src={item.picture} />
+                        <img className="GoodsPicture" src={item.img} />
                         <div className="GoodsLikeWrap">
                             <FavoriteBorderIcon className="GoodsLike"></FavoriteBorderIcon>
                         </div>
-                        <div className="GoodsText">{item.text}</div>
+                        <div className="GoodsText">{item.subgroup}{item.company}{item.collection}{item.name}</div>
                         <div className="GoodsPrice">{item.price}₽</div>
                         <Button></Button>
                     </div>

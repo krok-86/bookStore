@@ -1,4 +1,4 @@
-import { IItem, ReleaseItem } from "./store/interface";
+import { IItem, ReleaseItem, Igoods } from "./store/interface";
 
 export const sort = [
   {
@@ -22,7 +22,7 @@ export const sort = [
     class: "Show",
   },
 ]
-export const goods = [
+export const goods: Igoods[] = [
     {
       name: 'Z NJZ702MLFS-AR',
       company: 'Daiwa',
