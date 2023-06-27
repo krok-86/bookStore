@@ -4,6 +4,9 @@ const NavBarStyled = styled.div`
 
 width: 100%;
 
+.NavButtonBlock {
+    background-color: #2d3f56;
+}
 .NavButtons {
     display: flex;
     column-gap: 15px;
@@ -11,6 +14,8 @@ width: 100%;
     padding: 15px 30px 15px 0;
     color: #bdcdd5;   
     background-color: #2d3f56;
+    width: 100%;    
+    max-width: 1200px;
     &-Wrapper {
         width: 100%;
         background-color: #2d3f56;
@@ -24,7 +29,7 @@ width: 100%;
     padding-bottom: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    max-width: 100%;
+    /* max-width: 100%; */
     background-color: #222e3d;
     max-width: 1200px;
     margin: 0 auto;

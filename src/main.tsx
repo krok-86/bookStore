@@ -19,6 +19,7 @@ import Contacts from './componets/SecondPage/Contacts/Contacts.tsx';
 import Articles from './componets/SecondPage/Articles/Articles.tsx';
 import Reviews from './componets/SecondPage/Reviews/Reviews.tsx';
 import NewGoods from './componets/SecondPage/NewGoods/NewGoods.tsx';
+import UnitOfGoods from './componets/commoneComponents/UnitOfGoods/UnitOfGoods.tsx';
 
 const Global = createGlobalStyle`
 body{
@@ -73,6 +74,10 @@ const router = createBrowserRouter([
   {
     path: "newGoods",
     element:<NewGoods />,
+  },
+  {
+    path: "unitOfGoods",
+    element:<UnitOfGoods />,
   },
   // {
   //   path: "brands",

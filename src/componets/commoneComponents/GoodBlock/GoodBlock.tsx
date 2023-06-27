@@ -14,7 +14,11 @@ const GoodBlock = () => {
                         <div className="GoodsLikeWrap">
                             <FavoriteBorderIcon className="GoodsLike"></FavoriteBorderIcon>
                         </div>
-                        <div className="GoodsText">{item.subgroup}{item.company}{item.collection}{item.name}</div>
+                        <div className="GoodsText">{item.subgroup}
+                        <div>{item.company}</div>
+                        <div>{item.collection}</div>
+                        <div>{item.name}</div>
+                        </div>
                         <div className="GoodsPrice">{item.price}₽</div>
                         <Button></Button>
                     </div>

@@ -2,12 +2,9 @@ import SliderImgStyled from './SliderImgStyled';
 import { useEffect, useState } from 'react';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import { slides } from '../../../../constants';
 
-const slides: string[] = [
-    "/images/slider/buffler.jpg",
-    "/images/slider/frapp.jpg",
-    "/images/slider/social_slider.jpg",
-]
+
 const SliderImg = () => {
     const [indexImg, setIndexImg] = useState(0);
     const makeCycle = () => {

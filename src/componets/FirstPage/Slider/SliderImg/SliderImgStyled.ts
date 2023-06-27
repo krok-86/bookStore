@@ -5,6 +5,11 @@ max-width: 1440px;
 width: 100%;
 background-color: #ffffff;
 
+.Carusel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .CaruselConteiner {
     display: flex;
     align-items: center;

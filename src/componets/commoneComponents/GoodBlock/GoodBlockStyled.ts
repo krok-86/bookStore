@@ -1,11 +1,16 @@
 import styled from 'styled-components';
 
 const GoodBlockStyled = styled.div`
+
+
 .GoodsItem{
-    display: flex;
-    justify-content: space-between;
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;    
     margin-right: 30px;
     margin-left: 30px;
+    max-width: 800px;
 }
 .GoodsArea {
     display: flex;
@@ -44,7 +49,7 @@ const GoodBlockStyled = styled.div`
     color: red;
 }
 .GoodsText {
-    text-align: center;
+    text-align: center;   
     color: #5e728c;
     cursor: pointer;
 }

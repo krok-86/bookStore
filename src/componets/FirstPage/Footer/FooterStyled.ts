@@ -5,10 +5,12 @@ display: flex;
 align-items: center;
 flex-direction: column;
 background-color: #2d3f56;
+width: 100%;
 
 .FooterBlock {
     display: flex;
     flex-direction: column;
+    max-width: 100%;
 }
 .Warning {
     color: #ffffff;
