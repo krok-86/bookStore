@@ -1,16 +1,11 @@
-import Footer from "../../FirstPage/Footer/Footer";
-import NavBar from "../../FirstPage/NavBar/NavBar";
 import GoodBlock from "../../commoneComponents/GoodBlock/GoodBlock";
 import NewGoodsStyled from "./NewGoodsStyled";
 import SortBlock from "./SortBlock/SortBlock";
 
-
 const NewGoods = () => {
   return (
-    <>
-      <NavBar />
-      <NewGoodsStyled>
-        <div className="NewGoods">
+    <NewGoodsStyled>
+      <div className="NewGoods">
         <h1>
           <b>Новинки</b>
         </h1>
@@ -27,16 +22,14 @@ const NewGoods = () => {
           </div>
           <div className="SortBlock">
             <div className="SortBlockButton">
-            <SortBlock />            
+              <SortBlock />
             </div>
             <GoodBlock /> <GoodBlock />
             <GoodBlock />
           </div>
         </div>
-        </div>        
-      </NewGoodsStyled>
-      <Footer />
-    </>
+      </div>
+    </NewGoodsStyled>
   );
 };
 
