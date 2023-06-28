@@ -9,7 +9,8 @@ export interface ReleaseItem {
     href: string;
   }
   export interface Igoods {
-    name: string;
+      id: number;
+      name: string;
       company: string;
       collection: string;
       group: string;

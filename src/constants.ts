@@ -1,4 +1,4 @@
-import { IItem, ReleaseItem, Igoods } from "./store/interface";
+import { IItem, ReleaseItem, Igoods } from "./interface";
 
 export const sort = [
   {
@@ -29,6 +29,7 @@ export const slides: string[] = [
 ]
 export const goods: Igoods[] = [
     {
+      id: 1,
       name: 'Z NJZ702MLFS-AR',
       company: 'Daiwa',
       collection: 'Ninja',
@@ -39,6 +40,7 @@ export const goods: Igoods[] = [
       price: 8400,
     },
     {
+      id: 2,
       name: 'Z NJZ802MFS-AR',
       company: 'Daiwa',
       collection: 'Ninja',
@@ -49,6 +51,7 @@ export const goods: Igoods[] = [
       price: 43630,
     },
     {
+      id: 3,
       name: 'Z NJZ802MHFS-AR',
       company: 'Daiwa',
       collection: 'Ninja',
@@ -59,6 +62,7 @@ export const goods: Igoods[] = [
       price: 47630,
     },  
     {
+      id: 4,
       name: 'Branzino EX AGS 94MMH',
       company: 'Daiwa',
       collection: 'Morethan',
@@ -69,6 +73,7 @@ export const goods: Igoods[] = [
       price: 55630,
     },
     {
+      id: 5,
       name: 'Branzino EX AGS 98M/MH',
       company: 'Daiwa',
       collection: 'Morethan',
@@ -79,6 +84,7 @@ export const goods: Igoods[] = [
       price: 6630,
     },
     {
+      id: 6,
       name: 'Branzino EX AGS 99I/LH',
       company: 'Daiwa',
       collection: 'Morethan',
@@ -89,6 +95,7 @@ export const goods: Igoods[] = [
       price: 7630,
     },
     {
+      id: 7,
       name: 'FC LT 1000S',
       company: 'Daiwa',
       collection: 'Freams',
@@ -99,6 +106,7 @@ export const goods: Igoods[] = [
       price: 3630,
     },
     {
+      id: 8,
       name: 'LT 2500',
       company: 'Daiwa',
       collection: 'Freams',
@@ -109,6 +117,7 @@ export const goods: Igoods[] = [
       price: 1630,
     },
     {
+      id: 9,
       name: 'LT 3000',
       company: 'Daiwa',
       collection: 'Freams',
@@ -119,6 +128,7 @@ export const goods: Igoods[] = [
       price: 9630,
     },
     {
+      id: 10,
       name: 'E LT 2000S',
       company: 'Daiwa',
       collection: 'Lexa',
@@ -129,6 +139,7 @@ export const goods: Igoods[] = [
       price: 3630,
     },
     {
+      id: 11,
       name: 'E LT 2500',
       company: 'Daiwa',
       collection: 'Lexa',
@@ -139,6 +150,7 @@ export const goods: Igoods[] = [
       price: 730,
     },
     {
+      id: 12,
       name: 'E LT 3000',
       company: 'Daiwa',
       collection: 'Lexa',
