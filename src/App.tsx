@@ -15,6 +15,7 @@ import UnitOfGoods from "./componets/commoneComponents/UnitOfGoods/UnitOfGoods.t
 import HomePage from "./HomePage.tsx";
 import NavBar from "./componets/FirstPage/NavBar/NavBar";
 import Footer from "./componets/FirstPage/Footer/Footer";
+import Brands from "./componets/SecondPage/Brends/Brends.tsx";
 
 const App = () => {
   const router = [
@@ -66,10 +67,10 @@ const App = () => {
       path: "unitOfGoods",
       element: <UnitOfGoods />,
     },
-    // {
-    //   path: "brands",
-    //   element:<Brands />,
-    // },
+    {
+      path: "brands",
+      element:<Brands />,
+    },
     // {
     //   path: "sale",
     //   element:<Sale />,

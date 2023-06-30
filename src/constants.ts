@@ -152,7 +152,7 @@ export const goods: Igoods[] = [
     {
       id: 12,
       name: 'E LT 3000',
-      company: 'Daiwa',
+      company: 'Shimano',
       collection: 'Lexa',
       group: 'Катушки',
       subgroup:'Безинерционные',
@@ -277,7 +277,7 @@ export const infoMenu = [
   },
   {
     value:"Бренды",
-    link: "/unitOfGoods",
+    link: "/brands",
   },
   {
     value:"Распродажа",

@@ -1,9 +1,9 @@
 import { FC, useState } from "react";
 import ToggleMenuStyled from "./ToggleMenuStyled";
 import MenuIcon from "@mui/icons-material/Menu";
-import { IItem } from "../NavBar";
 import CloseIcon from '@mui/icons-material/Close';
 import { goods } from "../../../../constants";
+import { IItem } from "../../../../interface";
 
 interface IToggleMenu {
     items: IItem[];
@@ -11,7 +11,7 @@ interface IToggleMenu {
     active: boolean;
     changeMenuActive: () => void;
 }
-const ToggleMenu: FC<IToggleMenu> = ({ items, active, changeMenuActive }) => {
+const ToggleMenu: FC<IToggleMenu> = ({ active, changeMenuActive }) => {
     const [selectedGroup, setSelectedGroup] = useState<string>('');
 // console.log(group)
 const selectedSubGruop = goods.reduce(function(acc: string[],curent){

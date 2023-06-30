@@ -67,9 +67,8 @@ const NavBar = () => {
         <div className="Products">
           <ToggleMenu
             active={menuActive}
-            changeMenuActive={changeMenuActive}
-            //   header={"Каталог товаров"}
-            items={items}
+            changeMenuActive={changeMenuActive} items={[]}            //   header={"Каталог товаров"}
+            // items={items}
           />
           <div className="SearchInput">
             <input

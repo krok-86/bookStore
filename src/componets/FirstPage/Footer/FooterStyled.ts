@@ -10,7 +10,7 @@ width: 100%;
 .FooterBlock {
     display: flex;
     flex-direction: column;
-    max-width: 100%;
+    max-width: 100%;   
 }
 .Warning {
     color: #ffffff;
