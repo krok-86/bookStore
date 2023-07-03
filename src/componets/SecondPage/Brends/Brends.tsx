@@ -4,9 +4,9 @@ import BrandsStyled from "./BrendsStyled";
 const Brands = () => {
     return (
         <BrandsStyled>
-<div><b>Бренды</b></div>
+<div className="BrandsHeader"><b>Бренды</b></div>
 {goods.map((item) => (
-    <div>{item.company}</div>
+    <div className="BrandsName">{item.company}</div>
     ))}
         </BrandsStyled>
     )
