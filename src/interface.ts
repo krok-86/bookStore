@@ -19,3 +19,4 @@ export interface ReleaseItem {
       img: string;      
       price: number;
   }
+  

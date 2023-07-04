@@ -4,6 +4,17 @@ import UnitOfGoodsStyled from "./UnitOfGoodsStyled";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
 const UnitOfGoods = () => {
+   const item = {
+        id: 1,
+        name: 'Z NJZ702MLFS-AR',
+        company: 'Daiwa',
+        collection: 'Ninja',
+        group: 'Удилища',
+        subgroup:'Спиннинг',
+        description: 'Описание, тест',
+        img: '/images/goods/spinnings/Branzino EX AGS 99I-LH.webp',      
+        price: 8400,
+      }
     const [imgActive, setImgActive] = useState<boolean>(false);
     const changeImgActive = () => {
       setImgActive(!imgActive)
@@ -30,11 +41,12 @@ const UnitOfGoods = () => {
             class: "UnitBlockText",
         },
     ]
+    const title = `${item.subgroup} ${item.company} ${item.name}`
     return (
         <UnitOfGoodsStyled>
             <div className="UnitHeader">
                 <h1 className="UnitText"><b>
-                    Спиннинг Daiwa 22 Morethan Branzino EX AGS 98M/MH, 295 см, 10-50 г
+                    {title}
                 </b></h1>
                 <div className="UnitDiscriptionBlock">
 
