@@ -5,7 +5,7 @@ const Sale = () => {
 
   return (
     <SaleStyled>
-    <NewGoods />
+    <NewGoods isSale = {true}/>
     </SaleStyled>
   )
 }

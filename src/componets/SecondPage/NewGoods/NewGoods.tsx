@@ -4,7 +4,7 @@ import NewGoodsStyled from "./NewGoodsStyled";
 import SortBlock from "./SortBlock/SortBlock";
 
 const NewGoods = () => {
-  const goodsSubgroup = goods.reduce ((acc, elem)=>acc.add(elem.subgroup),new Set())
+  const goodsSubgroup = [... new Set(goods.map((item) => item.subgroup))]
     console.log(goodsSubgroup);
   return (
     <NewGoodsStyled>
@@ -18,8 +18,12 @@ const NewGoods = () => {
               <b>Тип товаров</b>
             </p>
             <ul>
-              <li>{goodsSubgroup}</li>             
-            </ul>
+             {goodsSubgroup.map((item) => (
+            <li>
+            <a className="">{item}</a>
+            </li>
+        ))}
+</ul> 
           </div>
           <div className="SortBlock">
             <div className="SortBlockButton">
