@@ -1,8 +1,11 @@
+import { goods } from "../../../constants";
 import GoodBlock from "../../commoneComponents/GoodBlock/GoodBlock";
 import NewGoodsStyled from "./NewGoodsStyled";
 import SortBlock from "./SortBlock/SortBlock";
 
 const NewGoods = () => {
+  const goodsSubgroup = goods.reduce ((acc, elem)=>acc.add(elem.subgroup),new Set())
+    console.log(goodsSubgroup);
   return (
     <NewGoodsStyled>
       <div className="NewGoods">
@@ -15,9 +18,7 @@ const NewGoods = () => {
               <b>Тип товаров</b>
             </p>
             <ul>
-              <li>Спиннинги</li>// надо помапить
-              <li>Катушки</li>
-              <li>Приманки</li>
+              <li>{goodsSubgroup}</li>             
             </ul>
           </div>
           <div className="SortBlock">

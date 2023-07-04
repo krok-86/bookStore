@@ -10,15 +10,17 @@ align-items: center;
     justify-content: start;
     
     color: #504a45;
-    width: 1280px;
+    width: 1080px;
     font-size: 32px;
     background-color: green;
 }
 .BrandsName {
     display: flex;
-    justify-content: start;
-    align-items: center;
-    width: 1280px;
+    /* justify-content: start;
+    align-items: center; */
+    flex-direction: column;
+    
+    width: 1080px;
     font-size: 16px;
     background-color: yellow;
 
