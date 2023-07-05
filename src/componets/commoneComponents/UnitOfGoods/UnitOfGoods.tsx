@@ -1,29 +1,20 @@
-import { useState } from "react";
 import Button from "../Button/Button";
 import UnitOfGoodsStyled from "./UnitOfGoodsStyled";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
 const UnitOfGoods = () => {
-   const item = {
+    const item = {
         id: 1,
         name: 'Z NJZ702MLFS-AR',
         company: 'Daiwa',
         collection: 'Ninja',
         group: 'Удилища',
-        subgroup:'Спиннинг',
+        subgroup: 'Спиннинг',
         description: 'Описание, тест',
-        img: '/images/goods/spinnings/Branzino EX AGS 99I-LH.webp',      
+        img: '/images/goods/spinnings/Branzino EX AGS 99I-LH.webp',
         price: 8400,
-      }
-    const [imgActive, setImgActive] = useState<boolean>(false);
-    const changeImgActive = () => {
-      setImgActive(!imgActive)
     }
     const advan = [
-        {
-            value: "295₽",
-            class: "UnitPrice"
-        },
         {
             value: "100% качество товара",
             class: "UnitBlockText",
@@ -41,7 +32,45 @@ const UnitOfGoods = () => {
             class: "UnitBlockText",
         },
     ]
+    const specifications = [
+        {
+            class: "UnitItem",
+            value:
+            {
+                property: "Длина,см",
+                mean: "295",
+            }
+            ,
+        },
+        {
+            class: "UnitItem",
+            value:
+            {
+                property: "Тест,г",
+                mean: "10 - 50",
+            }
+            ,
+        },
+        {
+            class: "UnitItem",
+            value:
+            {
+                property: "Вес,г",
+                mean: "152",
+            }
+            ,
+        },
+        {
+            class: "UnitItem",
+            value:
+            {
+                property: "Строй",
+                mean: "Fast",
+            },
+        },
+    ]
     const title = `${item.subgroup} ${item.company} ${item.name}`
+    const price = `${item.price}`
     return (
         <UnitOfGoodsStyled>
             <div className="UnitHeader">
@@ -49,28 +78,21 @@ const UnitOfGoods = () => {
                     {title}
                 </b></h1>
                 <div className="UnitDiscriptionBlock">
-
-                <img className="UnitPicture" onClick={changeImgActive} src='/images/goods/spinnings/Branzino EX AGS 99I-LH.webp' />
-                 
-                    
+                    <img className="UnitPicture" src={item.img} />
                     <div className="UnitBlock">
                         <p className="UnitProperty"><b>Характеристики</b></p>
                         <div className="UnitTable">
-                            <div className="UnitItem">Длина,см
-                                <div>295</div>
-                            </div>
-                            <div className="UnitItem">Тест,г
-                                <div>10 - 50</div>
-                            </div>
-                            <div className="UnitItem">Вес,г
-                                <div>152</div>
-                            </div>
-                            <div className="UnitItem">Строй
-                                <div>Fast</div>
-                            </div>
+                            {specifications.map((item, index) => (
+                                <div className={item.class} key={index}>{item.value.property}
+                                    <div>{item.value.mean}</div>
+                                </div>
+                            ))}
                         </div>
                     </div>
                     <div className="UnitAdvan">
+                        <div className="UnitPrice">
+                            {price}₽
+                        </div>
                         {advan.map((item, index) => (
                             <div className={item.class} key={index}>{item.value}
                             </div>

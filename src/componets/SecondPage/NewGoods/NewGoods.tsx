@@ -10,7 +10,6 @@ interface INewGoods {
 
 const NewGoods:FC<INewGoods> = ({isSale}) => {
   const goodsSubgroup = [... new Set(goods.map((item) => item.subgroup))]
-    console.log(goodsSubgroup);
     const title = isSale ? "Распродажа" : "Новинки"
   return (
     <NewGoodsStyled>
