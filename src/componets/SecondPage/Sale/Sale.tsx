@@ -1,13 +1,12 @@
-import GoodBlock from "../../commoneComponents/GoodBlock/GoodBlock";
+import GoodCommon from "../../commoneComponents/GoodCommon/GoodCommon";
 import UnitOfGoods from "../../commoneComponents/UnitOfGoods/UnitOfGoods";
-import NewGoods from "../NewGoods/NewGoods";
 import SaleStyled from "./SaleStyled";
 
 const Sale = () => {
 
   return (
     <SaleStyled>
-    {/* <NewGoods isSale = {true}/> */}
+    {/* <GoodCommon isSale = {true}/> */}
    <UnitOfGoods />
     </SaleStyled>
   )

@@ -2,7 +2,10 @@ import Button from "../Button/Button";
 import UnitOfGoodsStyled from "./UnitOfGoodsStyled";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
+
 const UnitOfGoods = () => {
+
+    const buttonText = "Купить"
     const item = {
         id: 1,
         name: 'Z NJZ702MLFS-AR',
@@ -97,7 +100,7 @@ const UnitOfGoods = () => {
                             <div className={item.class} key={index}>{item.value}
                             </div>
                         ))}
-                        <Button />
+                        <Button nameButton={buttonText} />
                         <div className="UnitAdd">
                             <FavoriteBorderIcon className="GoodsLike" />
                             Добавить в избранное</div>

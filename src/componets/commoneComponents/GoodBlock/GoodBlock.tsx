@@ -4,7 +4,7 @@ import GoodBlockStyled from "./GoodBlockStyled";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
 const GoodBlock = () => {
-
+const buttonText = "купить" 
     return (
         <GoodBlockStyled>
             <div className="GoodsItem">
@@ -20,7 +20,7 @@ const GoodBlock = () => {
                         <div>{item.name}</div>
                         </div>
                         <div className="GoodsPrice">{item.price}₽</div>
-                        <Button></Button>
+                        <Button nameButton={buttonText}/>
                     </div>
                 ))}
             </div>
