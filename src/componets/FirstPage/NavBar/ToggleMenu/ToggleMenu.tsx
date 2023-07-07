@@ -49,8 +49,8 @@ const selectedSubGruop = goods.reduce(function(acc: string[],curent){
                     <div className="MenuContent">
                         <div className="MenuBranchLeft">
                             <ul>
-                                {goodsReduce.map((item) => (
-                                    <li onMouseEnter={() => setSelectedGroup(item)}>
+                                {goodsReduce.map((item,index) => (
+                                    <li key={index} onMouseEnter={() => setSelectedGroup(item)}>
                                         <a>{item}</a>
                                     </li>
                                 ))}

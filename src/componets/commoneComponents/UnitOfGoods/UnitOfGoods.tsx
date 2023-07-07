@@ -1,10 +1,14 @@
 import Button from "../Button/Button";
 import UnitOfGoodsStyled from "./UnitOfGoodsStyled";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-
+import { useState } from 'react';
+// import CloseIcon from '@mui/icons-material/Close';
 
 const UnitOfGoods = () => {
-
+const [details,setDetails] = useState (false);
+// const changeDetails = () => {
+//     setDetails(!details)
+//   }
     const buttonText = "Купить"
     const item = {
         id: 1,
@@ -81,7 +85,8 @@ const UnitOfGoods = () => {
                     {title}
                 </b></h1>
                 <div className="UnitDiscriptionBlock">
-                    <img className="UnitPicture" src={item.img} />
+                <img className="UnitPicture" onClick = {()=> setDetails(prev=>!prev)} src={item.img}/>
+                   {details && <img className="UnitShowPicture" onClick = {()=> setDetails(prev=>!prev)} src={item.img}/>}
                     <div className="UnitBlock">
                         <p className="UnitProperty"><b>Характеристики</b></p>
                         <div className="UnitTable">

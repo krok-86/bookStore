@@ -17,6 +17,7 @@ import NavBar from "./componets/FirstPage/NavBar/NavBar";
 import Footer from "./componets/FirstPage/Footer/Footer";
 import Brands from "./componets/SecondPage/Brends/Brends.tsx";
 import Sale from "./componets/SecondPage/Sale/Sale.tsx";
+import AppStyled from "./AppStyled.ts";
 
 const App = () => {
   const router = [
@@ -91,6 +92,7 @@ const App = () => {
   ];
   return (
     <BrowserRouter>
+    <AppStyled>
       <NavBar />
 
       <Routes>
@@ -99,6 +101,7 @@ const App = () => {
         })}
       </Routes>
       <Footer />
+      </AppStyled>
     </BrowserRouter>
   );
 };

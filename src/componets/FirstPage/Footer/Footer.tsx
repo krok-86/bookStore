@@ -41,15 +41,15 @@ const Footer = () => {
           <div className="Card">
             <p>Мы принимаем онлайн и в шоу-руме:</p>
             <div className="CardItem">
-              {cards.map((item) => {
-                return <div className={item.class}>{item.value}</div>;
+              {cards.map((item,index) => {
+                return <div key={index} className={item.class}>{item.value}</div>;
               })}
             </div>
           </div>
           <div className="Delivery">Мы отправляем заказы службами:</div>
           <div className="Mail">
-            {mailing.map((item) => {
-              return <div className={item.class}>{item.value}</div>;
+            {mailing.map((item,index) => {
+              return <div key={index} className={item.class}>{item.value}</div>;
             })}
           </div>
           <div className="Entity">

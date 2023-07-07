@@ -24,6 +24,22 @@ padding: 14px 0 33px 19px;
 .UnitPicture:hover {
     border: 1px solid #ff0000;
 }
+.UnitShowPicture {
+    width:500px;
+    height: 500px;
+    border-radius: 20px;
+    border: 1px solid #eaeaea;
+    cursor: pointer;     
+}
+/* .UnitPicClose {
+	background-color: #ff0000;
+	border-radius: 50%;
+	color: #ffffff;
+	display: flex;
+	justify-content: center;
+	align-self: flex-start;
+	margin: 10px;
+} */
 .UnitDiscriptionBlock {
     display: flex;
     align-items: center;
