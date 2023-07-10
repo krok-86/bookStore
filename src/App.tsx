@@ -18,6 +18,7 @@ import Footer from "./componets/FirstPage/Footer/Footer";
 import Brands from "./componets/SecondPage/Brends/Brends.tsx";
 import Sale from "./componets/SecondPage/Sale/Sale.tsx";
 import AppStyled from "./AppStyled.ts";
+import GoodBlock from "./componets/commoneComponents/GoodBlock/GoodBlock.tsx";
 
 const App = () => {
   const router = [
@@ -85,6 +86,11 @@ const App = () => {
       path: "basket",
       element: <Basket />,
     },
+    {
+      path: "/:category/:subcategory",
+      element: <NewGoods /> ,
+    },
+    // завести роут
     // {
     //   path: "http://127.0.0.1:5173/",
     //   element:<App />,

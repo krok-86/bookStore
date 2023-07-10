@@ -20,11 +20,12 @@ const [details,setDetails] = useState (false);
         description: 'Описание, тест',
         img: '/images/goods/spinnings/Branzino EX AGS 99I-LH.webp',
         price: 8400,
+
     }
     const advan = [
         {
             value: "100% качество товара",
-            class: "UnitBlockText",
+            class: "UnitBlockText",//перенести одинаковые
         },
         {
             value: "Гарантия лучшей цены",
@@ -68,7 +69,7 @@ const [details,setDetails] = useState (false);
             ,
         },
         {
-            class: "UnitItem",
+            class: "UnitItem",//не мапить
             value:
             {
                 property: "Строй",

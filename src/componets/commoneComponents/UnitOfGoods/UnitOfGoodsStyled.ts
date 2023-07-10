@@ -25,8 +25,12 @@ padding: 14px 0 33px 19px;
     border: 1px solid #ff0000;
 }
 .UnitShowPicture {
-    width:500px;
-    height: 500px;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+    width: 900px;
+    height: 900px;
     border-radius: 20px;
     border: 1px solid #eaeaea;
     cursor: pointer;     

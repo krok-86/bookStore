@@ -2,8 +2,9 @@ import { FC, useState } from "react";
 import ToggleMenuStyled from "./ToggleMenuStyled";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from '@mui/icons-material/Close';
-import { goods } from "../../../../constants";
+import { Categoriesenam, goods } from "../../../../constants";
 import { IItem } from "../../../../interface";
+import { Link } from "react-router-dom";
 
 interface IToggleMenu {
     items: IItem[];
@@ -65,11 +66,14 @@ const selectedSubGruop = goods.reduce(function(acc: string[],curent){
                         </div>
                         <div className="MenuBranchRight">
                             <ul>
-                                {selectedSubGruop.map((item, index) => (
+                                {selectedSubGruop.map((item, index) =>{
+                                        const subGroup = Object.keys(Categoriesenam).find(key => Categoriesenam[key] === item);
+                                        const group = Object.keys(Categoriesenam).find(key => Categoriesenam[key] === selectedGroup);
+                                    return (
                                     <li key={index}>
-                                        <a>{item}</a>
+                                        <Link to={`/${group}/${subGroup}`}>{item}</Link>
                                     </li>
-                                ))}
+                                )})}
                             </ul>
                         </div>
                         <div className="MenuClose" onClick={changeMenuActive}><CloseIcon /></div>

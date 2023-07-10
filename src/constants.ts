@@ -1,5 +1,14 @@
 import { IItem, ReleaseItem, Igoods } from "./interface";
 
+export const Categoriesenam = {
+  rods: 'Удилища',
+  spinning: 'Спиннинг',
+  fider: 'Фидер',
+  casting: 'Кастинг',
+  coils: 'Катушки',
+  spinningCoils: 'Безинерционные',  
+}
+
 export const sort = [
   {
     title: "Показывать:",
