@@ -6,8 +6,8 @@ const SortBlock = () => {
     return (
         <SortBlockStyled>
             <div className="Sort">
-                {sort.map((item) => (
-                    <div className={item.class}>{item.title}</div>
+                {sort.map((item,index) => (
+                    <div className={item.class} key={index}>{item.title}</div>
                 ))}                
             </div>
         </SortBlockStyled>

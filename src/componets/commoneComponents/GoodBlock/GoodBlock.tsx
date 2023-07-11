@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import { useParams } from "react-router-dom";
-import { Categoriesenam, goods } from "../../../constants";
+import { Link, useParams } from "react-router-dom";
+import {  CategoriesEnum, goods } from "../../../constants";
 import Button from "../Button/Button";
 import GoodBlockStyled from "./GoodBlockStyled";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
@@ -17,22 +17,23 @@ const GoodBlock = () => {
     if (!subcategory) return;
     const filtGoods = goods.filter(
         //@ts-ignore
-      (item) => item.subgroup === Categoriesenam[subcategory]
+      (item) => item.subgroup ===  CategoriesEnum[subcategory]
     );
     setFilterGoods(filtGoods);
   }, [subcategory]);
 
   return (
-    <GoodBlockStyled>
+    <GoodBlockStyled>            
       <div className="GoodsItem">
     {/* обернуть в Линк и прописать дин путь к юнит */}
-        {filterGoods.map((item) => (
+        <Link to={"`/${group}/${subGroup}`"} >
+        {filterGoods.map((item, index) => (
           <div className="GoodsArea">
             <img className="GoodsPicture" src={item.img} />
             <div className="GoodsLikeWrap">
               <FavoriteBorderIcon className="GoodsLike"></FavoriteBorderIcon>
             </div>
-            <div className="GoodsText">
+            <div className="GoodsText" key={index}>              
               {item.subgroup}
               <div>{item.company}</div>
               <div>{item.collection}</div>
@@ -42,7 +43,8 @@ const GoodBlock = () => {
             <Button nameButton={buttonText} />
           </div>
         ))}
-      </div>
+        </Link>
+      </div>     
     </GoodBlockStyled>
   );
 };

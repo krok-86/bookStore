@@ -1,6 +1,6 @@
 import { IItem, ReleaseItem, Igoods } from "./interface";
 
-export const Categoriesenam = {
+export const  CategoriesEnum = {
   rods: 'Удилища',
   spinning: 'Спиннинг',
   fider: 'Фидер',

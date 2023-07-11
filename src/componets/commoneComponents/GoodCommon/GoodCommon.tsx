@@ -9,7 +9,7 @@ interface INewGoods {
 }
 
 const NewGoods:FC<INewGoods> = ({isSale}) => {
-  const goodsSubgroup = [... new Set(goods.map((item) => item.subgroup))]
+  const goodsSubgroup = [... new Set(goods.map((item) => item.subgroup))];
     const title = isSale ? "Распродажа" : "Новинки"
   return (
     <NewGoodsStyled>
@@ -23,9 +23,9 @@ const NewGoods:FC<INewGoods> = ({isSale}) => {
               <b>Тип товаров</b>
             </p>
             <ul>
-             {goodsSubgroup.map((item) => (
+             {goodsSubgroup.map((item,index) => (
             <li>
-            <a className="">{item}</a>
+            <a key={index}>{item}</a>
             </li>
         ))}
 </ul> 
