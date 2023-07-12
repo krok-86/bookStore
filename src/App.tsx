@@ -18,6 +18,7 @@ import Footer from "./componets/FirstPage/Footer/Footer";
 import Brands from "./componets/SecondPage/Brends/Brends.tsx";
 import Sale from "./componets/SecondPage/Sale/Sale.tsx";
 import AppStyled from "./AppStyled.ts";
+import AllGoods from "./componets/SecondPage/AllGoods/AllGoods.tsx";
 // import GoodBlock from "./componets/commoneComponents/GoodBlock/GoodBlock.tsx";
 
 const App = () => {
@@ -61,6 +62,10 @@ const App = () => {
     {
       path: "reviews",
       element: <Reviews />,
+    },
+    {
+      path: "allGoods",
+      element: <AllGoods />,
     },
     {
       path: "newGoods",

@@ -26,7 +26,7 @@ const GoodBlock = () => {
     <GoodBlockStyled>            
       <div className="GoodsItem">
     {/* обернуть в Линк и прописать дин путь к юнит */}
-        <Link to={"`/${group}/${subGroup}`"} >
+        {/* <Link to={"`/${group}/${subGroup}`"} > */}
         {filterGoods.map((item, index) => (
           <div className="GoodsArea">
             <img className="GoodsPicture" src={item.img} />
@@ -43,7 +43,7 @@ const GoodBlock = () => {
             <Button nameButton={buttonText} />
           </div>
         ))}
-        </Link>
+        {/* </Link> */}
       </div>     
     </GoodBlockStyled>
   );

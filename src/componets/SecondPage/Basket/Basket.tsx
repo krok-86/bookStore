@@ -2,9 +2,9 @@ import { useState } from "react";
 import BasketStyled from "./BasketStyled";
 
 const Basket = () => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
   const decreaseCounter = () => {
-    if (count !== 0) {
+    if (count !== 1) {
       setCount(count - 1);
     }
   };

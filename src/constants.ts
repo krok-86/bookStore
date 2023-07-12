@@ -9,28 +9,8 @@ export const  CategoriesEnum = {
   spinningCoils: 'Безинерционные',  
 }
 
-export const sort = [
-  {
-    title: "Показывать:",
-    class: "",
-  },
-  {
-    title: "Все товары",
-    class: "Show",
-  },
-  {
-    title: "В наличии",
-    class: "Show",
-  },
-  {
-    title: "По названию",
-    class: "Show",
-  },
-  {
-    title: "По цене",
-    class: "Show",
-  },
-]
+export const sort = ["Показывать:","Все товары","В наличии","По названию","По цене",];
+  
 export const slides: string[] = [
   "/images/slider/buffler.jpg",
   "/images/slider/frapp.jpg",
@@ -280,6 +260,10 @@ export const goods: Igoods[] = [
       },      
     ];
 export const infoMenu = [
+  {
+    value:"Все товары",
+    link: "/allGoods",
+  },
   {
     value:"Новинки",
     link: "/newGoods",
