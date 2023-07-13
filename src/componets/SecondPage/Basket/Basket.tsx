@@ -1,8 +1,10 @@
 import { useState } from "react";
 import BasketStyled from "./BasketStyled";
+import SelectedGoods from "../../commoneComponents/SelectedGoods/SelectedGoods";
 
 const Basket = () => {
   const [count, setCount] = useState(1);
+  const delBasket:string[] = "Удалить из корзины"
   const decreaseCounter = () => {
     if (count !== 1) {
       setCount(count - 1);
@@ -10,20 +12,11 @@ const Basket = () => {
   };
   return (
     <BasketStyled>
-      <div>
+      <>
         <div className="Include">Содержимое заказа</div>
         <div className="Accessible">Доступные для заказа товары</div>
-        <div className="BasketItem">
-          <img
-            className="BasketItemPicture"
-            src="/images/newReliases/спиннинг.jpg"
-          />
-          <div className="BasketItemBlock">
-            <div className="BasketItemDiscription">
-              Спиннинг Daiwa 20 Emeraldas Air AGS 83M, 251 см, 7-32 г
-            </div>
-            <div className="BasketItemDelete">Удалить из корзины</div>
-          </div>
+        <div className="Basket">
+          <SelectedGoods titleDel={delBasket}/>
           <div className="Price">
             <div className="PriceNumber">42941 ₽</div>
             <div className="PriceButton">
@@ -50,7 +43,7 @@ const Basket = () => {
             </div>
           </div>
         </div>
-      </div>
+      </>
     </BasketStyled>
   );
 };

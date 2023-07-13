@@ -1,3 +1,4 @@
+import { advan } from "../../../constants";
 import Button from "../Button/Button";
 import UnitOfGoodsStyled from "./UnitOfGoodsStyled";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
@@ -22,24 +23,8 @@ const [details,setDetails] = useState (false);
         price: 8400,
 
     }
-    const advan = [
-        {
-            value: "100% качество товара",
-            class: "UnitBlockText",//перенести одинаковые
-        },
-        {
-            value: "Гарантия лучшей цены",
-            class: "UnitBlockText",
-        },
-        {
-            value: "Доставка со склада в Москве",
-            class: "UnitBlockText",
-        },
-        {
-            value: "Безопасная онлайн оплата",
-            class: "UnitBlockText",
-        },
-    ]
+    
+        
     const specifications = [
         {
             class: "UnitItem",
@@ -103,7 +88,7 @@ const [details,setDetails] = useState (false);
                             {price}₽
                         </div>
                         {advan.map((item, index) => (
-                            <div className={item.class} key={index}>{item.value}
+                            <div className="UnitBlockText" key={index}>{item}
                             </div>
                         ))}
                         <Button nameButton={buttonText} />
