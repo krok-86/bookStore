@@ -4,7 +4,7 @@ import ButtonStyled from "./ButtonStyled";
 interface INameButton {
     nameButton?: string,
   }
-const Button:FC<INameButton> = ({nameButton}) => {
+const Button:FC<INameButton> = ({nameButton,}) => {
 
     return (
         <ButtonStyled>

@@ -5,7 +5,7 @@ import NewGoodsStyled from "./GoodCommonStyled";
 import SortBlock from "./SortBlock/SortBlock";
 
 interface INewGoods {
-  isSale?: boolean,
+  isSale?: boolean;
 }
 
 const NewGoods:FC<INewGoods> = ({isSale}) => {

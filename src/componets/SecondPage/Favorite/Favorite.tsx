@@ -1,26 +1,19 @@
+import TotalPriceBlock from "../../commoneComponents/GoodCommon/TotalPriceBlock/TotalPriceBlock";
 import SelectedGoods from "../../commoneComponents/SelectedGoods/SelectedGoods";
 import FavoriteStyled from "./FavoriteStyled";
 
 const Favorite = () => {
-  const delFavorite = "Удалить из избранного"
+  const delFavorite = "Удалить из избранного";
+  const emptyTitle = "Список избранных товаров пока еще пуст"
+  const titleButton = "Купить";
   return (
     <FavoriteStyled>
       <div>
         <div className="Include">Избранные товары</div>
         <div className="Accessible">Доступные для заказа товары</div>
         <div className="Favorite">
-        <SelectedGoods titleDel={delFavorite}/>
-        <div className="Total">
-          <div className="TotalBlock">
-            <div className="TotalText">Товары</div>
-            <div className="TotalText">42941 ₽</div>
-          </div>
-          <div className="TotalBlock">
-            <div className="TotalText">Итого</div>
-            <div className="TotalText">42941 ₽</div>
-          </div>
-          <div className="TotalButton">Купить</div>
-        </div>
+        <SelectedGoods titleDel={delFavorite} emptyTitle={emptyTitle}/>
+        <TotalPriceBlock titleButton={titleButton}/>        
       </div>
       </div>
     </FavoriteStyled>
